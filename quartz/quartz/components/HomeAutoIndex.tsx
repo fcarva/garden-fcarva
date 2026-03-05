@@ -17,10 +17,13 @@ const isWritingNote = (file: QuartzComponentProps["allFiles"][number]) => {
 
 const oneLine = (value?: string) => value?.replace(/\s+/g, " ").trim()
 const topicLabel = (tag: string) => {
-  if (tag === "bens-publicos") {
-    return "bens públicos"
+  const labels: Record<string, string> = {
+    "bens-publicos": "bens públicos",
+    "democracia-participatoria": "democracia participatória",
+    "financiamento-quadratico": "financiamento quadrático",
   }
-  return tag.replace(/-/g, " ")
+
+  return labels[tag] ?? tag.replace(/-/g, " ")
 }
 
 const HomeAutoIndex: QuartzComponent = ({ allFiles, fileData, cfg, displayClass }: QuartzComponentProps) => {

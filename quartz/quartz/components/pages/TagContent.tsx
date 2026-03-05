@@ -18,10 +18,13 @@ const defaultOptions: TagContentOptions = {
 }
 
 const topicLabel = (tag: string) => {
-  if (tag === "bens-publicos") {
-    return "bens públicos"
+  const labels: Record<string, string> = {
+    "bens-publicos": "bens públicos",
+    "democracia-participatoria": "democracia participatória",
+    "financiamento-quadratico": "financiamento quadrático",
   }
-  return tag.replace(/-/g, " ")
+
+  return labels[tag] ?? tag.replace(/-/g, " ")
 }
 
 export default ((opts?: Partial<TagContentOptions>) => {

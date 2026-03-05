@@ -7,7 +7,7 @@ tags:
   - escrita
   - sistemas
   - economia
-  - bens publicos
+  - bens-publicos
   - democracia
 ---
 ### Introduction
