@@ -267,9 +267,21 @@ a {
         }
       }
     }
-    & .page-header,
+    & .page-header {
+      margin-top: 1rem;
+    }
+
     & .page-footer {
       margin-top: 1rem;
+    }
+
+    & .page-footer:not(:empty) {
+      padding-top: 1rem;
+      border-top: 1px solid var(--lightgray);
+    }
+
+    & .page-footer:empty {
+      display: none;
     }
 
     & .page-header {

@@ -66,6 +66,7 @@ SubscribeEmbed.css = `
 
 .subscribe-embed .subscribe-kicker a {
   color: var(--gray);
+  text-decoration: none;
 }
 
 .subscribe-embed .subscribe-kicker a:hover {

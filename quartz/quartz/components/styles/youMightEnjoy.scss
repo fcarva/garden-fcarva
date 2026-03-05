@@ -1,7 +1,7 @@
 .you-might-enjoy {
   margin-top: 2.8rem;
-  padding-top: 1.8rem;
-  border-top: 1px solid var(--lightgray);
+  padding-top: 0;
+  border-top: none;
 }
 
 .you-might-enjoy > h2 {
@@ -46,4 +46,3 @@
 .you-might-enjoy > ul > li > a:hover > .title {
   color: var(--secondary);
 }
-
