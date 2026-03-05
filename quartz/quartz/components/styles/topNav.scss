@@ -12,7 +12,9 @@
   font-family: var(--headerFont);
   font-size: 1rem;
   font-weight: 500;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.14em;
 }
 
 .top-nav-links {
@@ -25,7 +27,9 @@
     color: var(--gray);
     font-size: 0.95rem;
     font-weight: 400;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.14em;
   }
 }
 
@@ -85,4 +89,3 @@
     width: min(94vw, 37rem);
   }
 }
-
