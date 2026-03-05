@@ -8,7 +8,6 @@ tags:
   - escrita
   - cultura
   - teatro
-  - clippings
 ---
 ## Rei Abelardo I agoniza; seu Secretário, Abelardo II, anseia subir ao poder; o povo enjaulado delira de fome.
 

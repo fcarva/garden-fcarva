@@ -8,7 +8,6 @@ tags:
   - escrita
   - bens-publicos
   - financiamento
-  - clippings
 ---
 ![Uploaded image](https://storage.googleapis.com/papyrus_images/6a4448a140f1a9d612d8131484e90a633ac40e9ee7a5ceff5024415bc0ff9fc7.png)
 

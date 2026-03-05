@@ -8,7 +8,6 @@ tags:
   - escrita
   - bens-publicos
   - impacto
-  - clippings
 ---
 ![](https://images.ecency.com/DQmapdGKfg5QpzRSAfznGLVaVBDWsDWA6THJRN2DzYRMksq/97fc36b53598888c21d931161bc5d1ca.jpg)
 

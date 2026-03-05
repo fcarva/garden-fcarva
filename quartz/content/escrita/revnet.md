@@ -29,16 +29,16 @@ Todas as regras principais são fixadas na implantação e definem emissão, res
 
 1. **Pagamento / Entrada (emissão)**
    
-- Qualquer pessoa pode pagar à revnet no(s) ativo(s) base aceito(s) $RES.
-- O contrato cunha (mints) $TOK ao preço de emissão atual; um *split* (divisão) opcional roteia uma porcentagem fixa de novos tokens para destinatários predefinidos.
+- Qualquer pessoa pode pagar à revnet no(s) ativo(s) base aceito(s) \$RES.
+- O contrato cunha (mints) \$TOK ao preço de emissão atual; um *split* (divisão) opcional roteia uma porcentagem fixa de novos tokens para destinatários predefinidos.
 - Os fundos permanecem no tesouro.
 1. **Cash out (resgate)**
    
-- O detentor queima $TOK para reivindicar fundos do tesouro.
+- O detentor queima \$TOK para reivindicar fundos do tesouro.
 - Uma taxa de cash-out definida por estágio mantém parte do valor resgatável no tesouro, o que eleva o preço piso futuro para os detentores restantes.
 1. **Empréstimo (loans)**
    
-- Em vez de fazer o cash-out, um detentor pode tomar emprestado do tesouro contra seus $TOK.
+- Em vez de fazer o cash-out, um detentor pode tomar emprestado do tesouro contra seus \$TOK.
 - O montante disponível para empréstimo é limitado pelo valor de cash-out desse colateral.
 ---
 ## Revnets: Operação em Estágios
@@ -53,7 +53,7 @@ $$S_k = (t_k, P_{\text{issue},k,0}, \gamma_{\text{cut},k}, \Delta t_k, \sigma_k,
 ## Parâmetros do Estágio
 
 1. **Stage start time** $(t_k)$: Momento em que este estágio entra em vigor.
-2. **Initial issuance rate** $(P_{\text{issue},k,0})$: $TOK por $RES unit pago no início do estágio (define o preço inicial).
+2. **Initial issuance rate** $(P_{\text{issue},k,0})$: \$TOK por \$RES unit pago no início do estágio (define o preço inicial).
 3. **Issuance cut percent** $(\gamma_{\text{cut},k})$: A redução fracionária na emissão a cada período (equivalentemente, o fator de aumento de preço por período $1/(1 - \gamma_{\text{cut},k})$).
 4. **Issuance cut frequency** $(\Delta t_k)$: Frequência com que o corte de emissão se aplica (por exemplo, diário, mensal).
 5. **Split percentage** $(\sigma_k)$: Fração de cada novo mint roteado para destinatários predefinidos (o restante vai para o pagador).
@@ -122,11 +122,11 @@ Dentro do estágio $k$ iniciando no tempo $t_k$, o preço de emissão evolui por
 $$P_{\text{issue},k}(t) = P_{\text{issue},k,0} \cdot \gamma_k^{\left\lfloor \frac{t - t_k}{\Delta t_k} \right\rfloor}, \quad t \in [t_k, t_{k+1}),\tag{2}$$
 onde:
 
-$$\gamma_k = \frac{1}{1 - \gamma_{\text{cut},k}} \quad \text{(fator de crescimento de preço por intervalo)},$$
+$$\gamma_k = \frac{1}{1 - \gamma_{\text{cut},k}} \quad \text{(fator de crescimento de preco por intervalo)},$$
 
-$$P_{\text{issue},k,0} = \text{preço de emissão inicial em } t = t_k,$$
+$$P_{\text{issue},k,0} = \text{preco de emissao inicial em } t = t_k,$$
 
-$$\Delta t_k = \text{frequência de corte de emissão para o estágio } k.$$
+$$\Delta t_k = \text{frequencia de corte de emissao para o estagio } k.$$
 
 Aqui $\lfloor x \rfloor$ denota a **função floor** (maior inteiro $\leq x$), o que torna $P_{\text{issue},k}(t)$ uma função em degrau: o preço é constante dentro de cada intervalo e salta por um fator $\gamma_k$ precisamente nos tempos $t = t_k + m,\Delta t_k$ que estão em $[t_k, t_{k+1})$.
 
@@ -142,7 +142,7 @@ e os saltos ocorrem em $t = t_k + m,\Delta t_k$ para todos os inteiros $m$ tais 
 
 ## Quantidade mintada
 
-Para um pagamento de valor $x$ em $RES tokens no tempo $t$ no estágio $k$, o contrato emite $q_{\text{issued}}$ $TOK de acordo com:
+Para um pagamento de valor $x$ em \$RES tokens no tempo $t$ no estágio $k$, o contrato emite $q_{\text{issued}}$ \$TOK de acordo com:
 
 $$q_{\text{issued}}(t) = \frac{x}{P_{\text{issue},k}(t)}\tag{3}$$
 
@@ -177,7 +177,7 @@ Essas regras de atualização definem um sistema dinâmico de tempo discreto par
 
 ## 2.3 Cash-out – Resgate (Redemption)
 
-A qualquer momento $t$ dentro do estágio $k$, um detentor de $TOK pode queimar tokens para reclamar uma parcela do tesouro no ativo base. O mecanismo de cash-out (também referido como "resgate") é governado por uma curva de bonding convexa, que garante que cash-outs parciais retenham valor no tesouro e aumentem gradualmente o preço floor para os detentores remanescentes.
+A qualquer momento $t$ dentro do estágio $k$, um detentor de \$TOK pode queimar tokens para reclamar uma parcela do tesouro no ativo base. O mecanismo de cash-out (também referido como "resgate") é governado por uma curva de bonding convexa, que garante que cash-outs parciais retenham valor no tesouro e aumentem gradualmente o preço floor para os detentores remanescentes.
 
 ## Curva de resgate
 
@@ -212,12 +212,12 @@ $$C_{\text{user}} = (1 - \phi_{\text{NANA}}),C_{\text{gross}} = 0.975,C_{\text{g
 
 Ambas as taxas são redistribuídas como pagamentos aos seus respectivos revnets, o que significa que:
 
-- REV fee → Pago ao $REV revnet → Issues $REV tokens para a pessoa fazendo cash-out;
-- NANA fee → Pago ao $NANA revnet → Issues $NANA tokens para a pessoa fazendo cash-out.
+- REV fee → Pago ao \$REV revnet → Issues \$REV tokens para a pessoa fazendo cash-out;
+- NANA fee → Pago ao \$NANA revnet → Issues \$NANA tokens para a pessoa fazendo cash-out.
 
 ## Preço de resgate do usuário
 
-O preço efetivo experimentado por um usuário fazendo cash-out de $q$ $TOK tokens:
+O preço efetivo experimentado por um usuário fazendo cash-out de $q$ \$TOK tokens:
 
 $$P_{\text{redeem}}^{\text{user}}(q) = (0.975)^2 \cdot \frac{B}{S}\left[(1 - r_k) + r_k,\frac{0.975q}{S}\right]\tag{9}$$
 
@@ -235,14 +235,14 @@ $$C_{\text{fee}}^{\text{REV}} = C_k(q_{\text{fee}}^{\text{REV}}; S', B'),$$
 
 $$C_{\text{fee}}^{\text{NANA}} = \phi_{\text{NANA}},C_{\text{gross}}.$$
 
-Esses valores são encaminhados como pagamentos de entrada (inbound payments) para os Revnets REV e NANA, de modo que o resgatador também recebe $X^{\text{REV}}$ $REV tokens de $C_{\text{fee}}^{\text{REV}}$ e $X^{\text{NANA}}$ $NANA tokens de $C_{\text{fee}}^{\text{NANA}}$.
+Esses valores são encaminhados como pagamentos de entrada (inbound payments) para os Revnets REV e NANA, de modo que o resgatador também recebe $X^{\text{REV}}$ \$REV tokens de $C_{\text{fee}}^{\text{REV}}$ e $X^{\text{NANA}}$ \$NANA tokens de $C_{\text{fee}}^{\text{NANA}}$.
 
 ![[Pasted image 20251126184105.png]]
 
-$$U_i^{$\text{TOK}}(t^+) = U_i^{$\text{TOK}}(t^-) - q, \quad \text{(Saldo em \$TOK do usuário)}$$
-$$U_i^{$\text{RES}}(t^+) = U_i^{$\text{RES}}(t^-) + C_{\text{user}}, \quad \text{(Saldo em ativo base do usuário)}$$
-$$U_i^{$\text{REV}}(t^+) = U_i^{$\text{REV}}(t^-) + X^{\text{REV}}, \quad \text{(Saldo em REV do usuário)}$$
-$$U_i^{$\text{NANA}}(t^+) = U_i^{$\text{NANA}}(t^-) + X^{\text{NANA}}, \quad \text{(Saldo em NANA do usuário)}$$
+$$U_i^{$\text{TOK}}(t^+) = U_i^{$\text{TOK}}(t^-) - q, \quad \text{(Saldo em \$TOK do usuario)}$$
+$$U_i^{$\text{RES}}(t^+) = U_i^{$\text{RES}}(t^-) + C_{\text{user}}, \quad \text{(Saldo em ativo base do usuario)}$$
+$$U_i^{$\text{REV}}(t^+) = U_i^{$\text{REV}}(t^-) + X^{\text{REV}}, \quad \text{(Saldo em REV do usuario)}$$
+$$U_i^{$\text{NANA}}(t^+) = U_i^{$\text{NANA}}(t^-) + X^{\text{NANA}}, \quad \text{(Saldo em NANA do usuario)}$$
 ---
 $^1$ Que são computados como:
 
@@ -258,7 +258,7 @@ $$B(t^+) = B(t^-) - C_{\text{user}} - C_{\text{fee}}^{\text{REV}} - C_{\text{fee
 
 # 2.4 Borrow – Empréstimo
 
-Em vez de fazer cash-out, um detentor pode tomar emprestado $RES do tesouro usando seus $TOK como colateral. O valor de cash-out do colateral limita o montante que pode ser emprestado. Tokens colaterais são _burned_ na originação (não locked) e são _reminted_ pro rata conforme o empréstimo é repagado. O sistema mantém supercolateralização vinculando montantes emprestáveis a valores de cash-out, garantindo que o revnet permaneça solvente mesmo se todos os empréstimos entrarem em default.
+Em vez de fazer cash-out, um detentor pode tomar emprestado \$RES do tesouro usando seus \$TOK como colateral. O valor de cash-out do colateral limita o montante que pode ser emprestado. Tokens colaterais são _burned_ na originação (não locked) e são _reminted_ pro rata conforme o empréstimo é repagado. O sistema mantém supercolateralização vinculando montantes emprestáveis a valores de cash-out, garantindo que o revnet permaneça solvente mesmo se todos os empréstimos entrarem em default.
 
 ## 2.4.1 Taking the loan
 
@@ -305,7 +305,7 @@ Assim, o emprestador recebe:
 
 $$L_{\text{net}} = L_{\text{gross}}(1 - F_{\text{NANA}} - F_{\text{REV}} - F_{\text{prepaid}}).\tag{14}$$
 
-As taxas são encaminhadas como pagamentos de entrada para os respectivos Revnets, de modo que o emprestador também recebe $X^{\text{NANA}}$ $NANA tokens de $F_{\text{NANA}}$, $X^{\text{REV}}$ $REV tokens de $F_{\text{REV}}$, e $X^{\text{TOK}}$ $TOK tokens de $F_{\text{prepay}}$$^4$.
+As taxas são encaminhadas como pagamentos de entrada para os respectivos Revnets, de modo que o emprestador também recebe $X^{\text{NANA}}$ \$NANA tokens de $F_{\text{NANA}}$, $X^{\text{REV}}$ \$REV tokens de $F_{\text{REV}}$, e $X^{\text{TOK}}$ \$TOK tokens de $F_{\text{prepay}}$$^4$.
 
 ## Duração do prepay
 
@@ -384,7 +384,7 @@ O montante de repagamento é dividido em duas operações:
 
 1. **Principal** $(P_{\text{repay}})$: Retornado ao revnet, restaurando o saldo do tesouro sem mintar tokens.
     
-2. **Source fee** $(F_{\text{time}})$: Pago ao revnet como um pagamento padrão, que minta $TOK para o beneficiário e aumenta o saldo do revnet.
+2. **Source fee** $(F_{\text{time}})$: Pago ao revnet como um pagamento padrão, que minta \$TOK para o beneficiário e aumenta o saldo do revnet.
     
 
 ## Time-dependent fee
@@ -459,7 +459,7 @@ $$B_{\text{borrowed}}(t^+) = B_{\text{borrowed}}(t^-) - L_{\text{gross}}.\tag{28
 
 # 3 Price Dynamics and Arbitrage Mechanisms
 
-O preço de emissão do usuário (Eq. 4) e os preços de cash-out (Eq. 9) definem os preços de teto e piso de $TOK, respectivamente. Para mostrar isso, vamos assumir que no tempo $t^*$ uma AMM emerge com preço $P^{\text{AMM}}$.
+O preço de emissão do usuário (Eq. 4) e os preços de cash-out (Eq. 9) definem os preços de teto e piso de \$TOK, respectivamente. Para mostrar isso, vamos assumir que no tempo $t^*$ uma AMM emerge com preço $P^{\text{AMM}}$.
 
 ## 3.1 Definition of the Price Corridor
 
@@ -467,16 +467,16 @@ O preço de emissão do usuário (Eq. 4) e os preços de cash-out (Eq. 9) define
 
 Se $P^{\text{AMM}} > P_{\text{issue}}^{\text{user}}$, um arbitrador iria:
 
-1. Comprar $q$ $TOK no revnet ao preço de emissão atual em troca de $x^{\text{in}}$ $RES, i.e. $q = \frac{x^{\text{in}}}{P_{\text{issue}}^{\text{user}}}$;
+1. Comprar $q$ \$TOK no revnet ao preço de emissão atual em troca de $x^{\text{in}}$ \$RES, i.e. $q = \frac{x^{\text{in}}}{P_{\text{issue}}^{\text{user}}}$;
     
 2. Vender todos os $q$ tokens por $x^{\text{AMM}}$ base tokens ao preço atual da AMM, i.e. $x^{\text{out}} = P^{\text{AMM}}q$
     
 3. Como $P^{\text{AMM}} > P_{\text{issue}}^{\text{user}}$, então $x^{\text{out}} > x^{\text{in}}$.
     
 
-Assim, se $P^{\text{AMM}} > P_{\text{issue}}^{\text{user}}$, um arbitrador compra $TOK através do Revnet, vendendo-os na AMM por $RES.
+Assim, se $P^{\text{AMM}} > P_{\text{issue}}^{\text{user}}$, um arbitrador compra \$TOK através do Revnet, vendendo-os na AMM por \$RES.
 
-Isso demonstra que $P_{\text{issue}}^{\text{user}}$ define o _price ceiling_ de $TOK:
+Isso demonstra que $P_{\text{issue}}^{\text{user}}$ define o _price ceiling_ de \$TOK:
 
 $$\boxed{P^{\text{ceil}}(t) = P_{\text{issue}}^{\text{user}}(t) = \frac{P_{\text{issue},k}(t)}{1 - \sigma_k}}\tag{29}$$
 
@@ -484,14 +484,14 @@ $$\boxed{P^{\text{ceil}}(t) = P_{\text{issue}}^{\text{user}}(t) = \frac{P_{\text
 
 Se $P^{\text{AMM}} < P_{\text{cash-out}}^{\text{user}}$, um arbitrador iria:
 
-1. Comprar $q$ $TOKS em troca de $x^{\text{in}}$ $RES na AMM ao preço atual da AMM, i.e. $q = \frac{x^{\text{in}}}{P^{\text{AMM}}}$
+1. Comprar $q$ \$TOKS em troca de $x^{\text{in}}$ \$RES na AMM ao preço atual da AMM, i.e. $q = \frac{x^{\text{in}}}{P^{\text{AMM}}}$
 
-2. Cash-out os $q$ $TOKs por $x^{\text{out}}$ ao preço atual de cash-out do revnet, i.e. $x^{\text{out}} = P_{\text{cash-out}}^{\text{user}}q$ 
+2. Cash-out os $q$ \$TOKs por $x^{\text{out}}$ ao preço atual de cash-out do revnet, i.e. $x^{\text{out}} = P_{\text{cash-out}}^{\text{user}}q$ 
 3. Como $P^{\text{AMM}} < P_{\text{cash-out}}^{\text{user}}$, então $x^{\text{out}} > x^{\text{in}}$
 
-Assim, se $P^{\text{AMM}} < P_{\text{cash-out}}^{\text{user}}$ um arbitrador compra $TOK através da AMM, fazendo cash-out deles no Revnet por $RES.
+Assim, se $P^{\text{AMM}} < P_{\text{cash-out}}^{\text{user}}$ um arbitrador compra \$TOK através da AMM, fazendo cash-out deles no Revnet por \$RES.
 
-Assim, o preço de cash-out do usuário para resgatar $q$ tokens $P_{\text{cash-out}}^{\text{user}}(q)$ define o piso de preço efetivo de $TOK para um tamanho de resgate $q$, i.e. o _redemption-dependent price floor_:
+Assim, o preço de cash-out do usuário para resgatar $q$ tokens $P_{\text{cash-out}}^{\text{user}}(q)$ define o piso de preço efetivo de \$TOK para um tamanho de resgate $q$, i.e. o _redemption-dependent price floor_:
 
 $$\boxed{\tilde{P}_{\text{floor}}(q) = (0.975)^2\frac{B}{S}\left[(1-r_k) + r_k\frac{(0.975)q}{S}\right] = P_{\text{cash-out}}^{\text{user}}(q)}\tag{30}$$
 
@@ -499,11 +499,11 @@ No entanto, como $P_{\text{cash-out}}^{\text{user}}$ é uma função crescente d
 
 $$\boxed{P_{\text{floor}} = \lim_{q \to 0} \tilde{P}_{\text{floor}}(q) = (1-r_k)(0.975)^2\frac{B}{S} \approx (1-r_k) \cdot 0.951 \cdot \frac{B}{S}}\tag{31}$$
 
-Esse valor marginal representa o menor preço de resgate alcançável e, portanto, constitui um limite inferior estrito para o preço racional de mercado secundário de $TOK.
+Esse valor marginal representa o menor preço de resgate alcançável e, portanto, constitui um limite inferior estrito para o preço racional de mercado secundário de \$TOK.
 
 ## Price Corridor
 
-As oportunidades de arbitragem definem um corredor de preço para o preço de $TOK, i.e. a qualquer momento $t$, isso mantém:
+As oportunidades de arbitragem definem um corredor de preço para o preço de \$TOK, i.e. a qualquer momento $t$, isso mantém:
 
 $$P^{\text{floor}} \leq P^{\text{AMM}} \leq P^{\text{ceil}}\tag{32}$$
 
@@ -612,7 +612,7 @@ Como $\Delta b = 0$ enquanto $\Delta s > 0$, temos $\frac{\Delta b}{\Delta s} = 
 
 ## 3.3 Summary
 
-Os mecanismos de arbitragem entre o Revnet e AMMs externas estabelecem propriedades fundamentais do preço de $TOK ao longo do tempo:
+Os mecanismos de arbitragem entre o Revnet e AMMs externas estabelecem propriedades fundamentais do preço de \$TOK ao longo do tempo:
 
 • **Price Corridor**: Oportunidades de arbitragem criam um corredor de preço bem definido onde $P^{\text{floor}} \leq P^{\text{AMM}} \leq P^{\text{ceil}}$ a qualquer momento $t$. Isso delimita o preço de mercado entre o valor de cash-out (floor) e o preço de emissão do usuário (ceiling).
 
@@ -620,7 +620,7 @@ Os mecanismos de arbitragem entre o Revnet e AMMs externas estabelecem proprieda
 
 • **Floor Dynamics**: O price floor $P^{\text{floor}} \propto \frac{B}{S}$ evolui com base na atividade da rede conforme detalhado na Tabela 2.
 
-• **Value Accrual**: O mecanismo crescente de price floor garante que o valor se acumula aos detentores de $TOK através da maioria das interações dos usuários com o Revnet, criando um loop de feedback positivo entre atividade de rede e valor do token.
+• **Value Accrual**: O mecanismo crescente de price floor garante que o valor se acumula aos detentores de \$TOK através da maioria das interações dos usuários com o Revnet, criando um loop de feedback positivo entre atividade de rede e valor do token.
 
 • **Loan**: O ciclo completo de empréstimo (originação seguida por repagamento completo dentro do período prepaid) tem um efeito não-zero no price floor, com o aumento no floor price causado pela prepaid fee.
 

@@ -9,7 +9,6 @@ tags:
   - economia
   - bens-publicos
   - clima
-  - clippings
 ---
 ![Uploaded image](https://storage.googleapis.com/papyrus_images/cafc9879687cc9dc4202170757a50c9799d359ae05c8b0f35e47cd6c7799c6d9.jpg)
 
