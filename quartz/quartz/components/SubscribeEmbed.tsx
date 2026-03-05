@@ -52,7 +52,7 @@ const SubscribeEmbed: QuartzComponent = ({ fileData, displayClass }: QuartzCompo
 
 SubscribeEmbed.css = `
 .subscribe-embed {
-  margin-top: 3rem;
+  margin-top: 1.85rem;
   padding-top: 0;
   border-top: none;
 }

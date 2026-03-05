@@ -17,6 +17,13 @@ const defaultOptions: TagContentOptions = {
   numPages: 10,
 }
 
+const topicLabel = (tag: string) => {
+  if (tag === "bens-publicos") {
+    return "bens públicos"
+  }
+  return tag.replace(/-/g, " ")
+}
+
 export default ((opts?: Partial<TagContentOptions>) => {
   const options: TagContentOptions = { ...defaultOptions, ...opts }
 
@@ -61,7 +68,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
               return (
                 <>
                   <a class="internal topic-link" href={href}>
-                    {tag}
+                    {topicLabel(tag)}
                   </a>
                   {index < tags.length - 1 ? <span>, </span> : null}
                 </>

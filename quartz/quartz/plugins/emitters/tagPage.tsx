@@ -18,6 +18,12 @@ interface TagPageOptions extends FullPageLayout {
 }
 
 const tagRoutes = ["tags", "topics"] as const
+const topicLabel = (tag: string) => {
+  if (tag === "bens-publicos") {
+    return "bens públicos"
+  }
+  return tag.replace(/-/g, " ")
+}
 
 function computeTagInfo(
   allFiles: QuartzPluginData[],
@@ -33,7 +39,7 @@ function computeTagInfo(
 
   const tagDescriptions: Record<string, ProcessedContent> = Object.fromEntries(
     [...tags].map((tag) => {
-      const title = tag === "index" ? i18n(locale).pages.tagContent.tagIndex : tag
+      const title = tag === "index" ? i18n(locale).pages.tagContent.tagIndex : topicLabel(tag)
       return [
         tag,
         defaultProcessedContent({
@@ -56,8 +62,11 @@ function computeTagInfo(
     if (tags.has(tag)) {
       tagDescriptions[tag] = [tree, file]
       const currentTitle = file.data.frontmatter?.title
-      if (currentTitle === `${i18n(locale).pages.tagContent.tag}: ${tag}`) {
-        file.data.frontmatter.title = tag
+      if (
+        currentTitle === `${i18n(locale).pages.tagContent.tag}: ${tag}` ||
+        currentTitle === tag
+      ) {
+        file.data.frontmatter.title = topicLabel(tag)
       }
     }
   }

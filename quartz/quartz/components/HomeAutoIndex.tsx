@@ -16,6 +16,12 @@ const isWritingNote = (file: QuartzComponentProps["allFiles"][number]) => {
 }
 
 const oneLine = (value?: string) => value?.replace(/\s+/g, " ").trim()
+const topicLabel = (tag: string) => {
+  if (tag === "bens-publicos") {
+    return "bens públicos"
+  }
+  return tag.replace(/-/g, " ")
+}
 
 const HomeAutoIndex: QuartzComponent = ({ allFiles, fileData, cfg, displayClass }: QuartzComponentProps) => {
   if (fileData.slug !== "index") {
@@ -71,7 +77,9 @@ const HomeAutoIndex: QuartzComponent = ({ allFiles, fileData, cfg, displayClass 
       <p class="home-topics-links">
         {topicTags.map((tag, index) => (
           <>
-            <a href={resolveRelative(fileData.slug, joinSegments("topics", tag) as FullSlug)}>{tag}</a>
+            <a href={resolveRelative(fileData.slug, joinSegments("topics", tag) as FullSlug)}>
+              {topicLabel(tag)}
+            </a>
             {index < topicTags.length - 1 ? <span>, </span> : null}
           </>
         ))}
@@ -101,7 +109,9 @@ const HomeAutoIndex: QuartzComponent = ({ allFiles, fileData, cfg, displayClass 
       <hr class="home-divider" />
 
       <p class="home-muted">
-        <a href={resolveRelative(fileData.slug, "biblioteca" as FullSlug)}>Biblioteca</a>
+        <a class="home-section-link" href={resolveRelative(fileData.slug, "biblioteca" as FullSlug)}>
+          Biblioteca
+        </a>
       </p>
       <p class="home-muted">Minha base de livros em visualizacao de cards.</p>
     </section>
