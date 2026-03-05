@@ -18,6 +18,7 @@ import Backlinks from "./Backlinks"
 import Search from "./Search"
 import Footer from "./Footer"
 import YouMightEnjoy from "./YouMightEnjoy"
+import SubscribeEmbed from "./SubscribeEmbed"
 import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
@@ -46,6 +47,7 @@ export {
   Search,
   Footer,
   YouMightEnjoy,
+  SubscribeEmbed,
   DesktopOnly,
   MobileOnly,
   RecentNotes,

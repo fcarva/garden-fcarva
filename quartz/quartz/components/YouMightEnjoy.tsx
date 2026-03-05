@@ -15,7 +15,7 @@ const defaultOptions: Options = {
   title: "You might also enjoy",
 }
 
-const hiddenSlugs = new Set(["/", "index", "tags", "sobre", "agora", "projects"])
+const hiddenSlugs = new Set(["/", "index", "tags", "sobre", "agora", "projects", "subscribe"])
 
 const shouldHideSlug = (slug: string) => hiddenSlugs.has(slug) || slug.startsWith("tags/")
 

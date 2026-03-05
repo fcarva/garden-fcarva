@@ -15,7 +15,7 @@ socialImage: og-image.jpg
 
 <p class="home-muted"><a href="/topics" class="internal-link">Topics</a></p>
 
-<p>
+<p class="home-topics-links">
   <a href="/topics/escrita" class="internal-link">escrita</a>,
   <a href="/topics/design" class="internal-link">design</a>,
   <a href="/topics/produto" class="internal-link">produto</a>,
@@ -26,8 +26,8 @@ socialImage: og-image.jpg
 
 <p class="home-muted"><a href="/escrita" class="internal-link">Writing</a></p>
 
-<ul>
-  <li><span class="writing-date">2026 - 03</span><a href="/escrita/primeiro-ensaio" class="internal-link">Primeiro ensaio no garden</a></li>
-  <li><span class="writing-date">2025 - 11</span><a href="/escrita/constrangimentos-geram-claridade" class="internal-link">Constrangimentos geram claridade</a></li>
-  <li><span class="writing-date">2025 - 07</span><a href="/escrita/notas-que-escalam" class="internal-link">Notas que escalam</a></li>
+<ul class="home-writing-list">
+  <li><span class="writing-date">2026 - 03</span> <a href="/escrita/primeiro-ensaio" class="internal-link">Primeiro ensaio no garden</a></li>
+  <li><span class="writing-date">2025 - 11</span> <a href="/escrita/constrangimentos-geram-claridade" class="internal-link">Constrangimentos geram claridade</a></li>
+  <li><span class="writing-date">2025 - 07</span> <a href="/escrita/notas-que-escalam" class="internal-link">Notas que escalam</a></li>
 </ul>
