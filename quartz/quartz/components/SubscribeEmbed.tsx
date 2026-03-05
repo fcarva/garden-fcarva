@@ -59,8 +59,8 @@ SubscribeEmbed.css = `
 .subscribe-embed .subscribe-kicker {
   margin: 0 0 0.95rem 0;
   color: var(--gray);
-  font-size: 1.8rem;
-  line-height: 1.25;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .subscribe-embed .subscribe-copy {
@@ -96,7 +96,7 @@ SubscribeEmbed.css = `
   border-bottom: 1px solid var(--lightgray);
   border-radius: 0;
   padding: 0.65rem 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
   outline: none;
 }
 
@@ -124,10 +124,6 @@ SubscribeEmbed.css = `
 }
 
 @media all and (max-width: 800px) {
-  .subscribe-embed .subscribe-kicker {
-    font-size: 1.45rem;
-  }
-
   .subscribe-embed .subscribe-form {
     align-items: stretch;
     flex-direction: column;
@@ -139,7 +135,7 @@ SubscribeEmbed.css = `
   }
 
   .subscribe-embed input[type="email"] {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 }
 `
