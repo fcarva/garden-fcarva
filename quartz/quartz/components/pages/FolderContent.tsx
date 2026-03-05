@@ -194,15 +194,18 @@ const baseCardsStyle = `
   border: 1px solid var(--lightgray);
   border-radius: 0.38rem;
   overflow: hidden;
-  background: var(--lightgray);
+  background: var(--light);
   aspect-ratio: var(--cards-aspect-ratio, 1.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .base-card-cover img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .base-card-placeholder {
