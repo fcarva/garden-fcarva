@@ -4,5 +4,5 @@ filters:
 views:
   - type: cards
     name: Tabela
-    image: note.coverUrl
-    imageAspectRatio: 1.5
+    image: note.CoverUrl
+    imageAspectRatio: 1.55

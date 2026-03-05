@@ -98,10 +98,23 @@ const getFrontmatterValue = (page: QuartzPluginData, pathKey: string): unknown =
   let current: unknown = page.frontmatter
 
   for (const segment of segments) {
-    if (!current || typeof current !== "object" || !(segment in current)) {
+    if (!current || typeof current !== "object") {
       return undefined
     }
-    current = (current as Record<string, unknown>)[segment]
+
+    const record = current as Record<string, unknown>
+    if (segment in record) {
+      current = record[segment]
+      continue
+    }
+
+    const segmentLower = segment.toLowerCase()
+    const matchedKey = Object.keys(record).find((key) => key.toLowerCase() === segmentLower)
+    if (!matchedKey) {
+      return undefined
+    }
+
+    current = record[matchedKey]
   }
 
   return current
@@ -154,7 +167,10 @@ const applyBaseFilters = (pages: QuartzPluginData[], baseConfig: BaseConfig | nu
 }
 
 const cardImageUrl = (page: QuartzPluginData, imageField?: string): string | undefined => {
-  const fallback = page.frontmatter?.coverUrl
+  const fallback =
+    page.frontmatter?.coverUrl ??
+    (page.frontmatter as Record<string, unknown> | undefined)?.CoverUrl
+
   if (!imageField) {
     return typeof fallback === "string" ? fallback : undefined
   }
@@ -181,24 +197,26 @@ const baseCardsStyle = `
 
 .base-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  gap: 1.15rem 0.9rem;
 }
 
 .base-card {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
 .base-card-cover {
-  border: 1px solid var(--lightgray);
-  border-radius: 0.38rem;
+  border: none;
+  border-radius: 0.45rem;
   overflow: hidden;
-  background: var(--light);
+  background: transparent;
   aspect-ratio: var(--cards-aspect-ratio, 1.5);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 120ms ease, filter 120ms ease;
 }
 
 .base-card-cover img {
@@ -211,29 +229,32 @@ const baseCardsStyle = `
 .base-card-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--lightgray), color-mix(in srgb, var(--lightgray) 65%, var(--gray)));
+  background: linear-gradient(135deg, var(--lightgray), color-mix(in srgb, var(--lightgray) 70%, var(--gray)));
 }
 
 .base-card-body {
-  margin-top: 0.5rem;
+  margin-top: 0.42rem;
 }
 
 .base-card-title {
   margin: 0;
   color: var(--darkgray);
-  font-size: 0.9rem;
-  line-height: 1.35;
-}
-
-.base-card-meta {
-  margin: 0.2rem 0 0;
-  color: var(--gray);
-  font-size: 0.8rem;
-  line-height: 1.35;
+  font-size: 0.84rem;
+  line-height: 1.25;
+  font-weight: 560;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .base-card:hover .base-card-title {
   color: var(--secondary);
+}
+
+.base-card:hover .base-card-cover {
+  transform: translateY(-1px);
+  filter: saturate(1.02);
 }
 `
 
@@ -324,14 +345,14 @@ export default ((opts?: Partial<FolderContentOptions>) => {
       const imageAspectRatio =
         typeof cardsView.imageAspectRatio === "number" && cardsView.imageAspectRatio > 0
           ? cardsView.imageAspectRatio
-          : 1.5
+          : 1.55
 
       return (
         <div class="popover-hint">
           <article class={classes}>{content}</article>
           <section class="base-cards-view" style={{ "--cards-aspect-ratio": String(imageAspectRatio) }}>
             <p class="base-cards-header">
-              {cardsView.name ?? "Cards"} ·{" "}
+              {cardsView.name ?? "Cards"} -{" "}
               {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
                 count: displayPages.length,
               })}
@@ -339,8 +360,6 @@ export default ((opts?: Partial<FolderContentOptions>) => {
             <div class="base-cards-grid">
               {displayPages.map((page) => {
                 const title = page.frontmatter?.title ?? page.slug ?? "Untitled"
-                const subtitle = page.frontmatter?.subtitle
-                const author = page.frontmatter?.author ?? page.frontmatter?.authors
                 const imageUrl = cardImageUrl(page, cardsView.image)
 
                 return (
@@ -354,11 +373,6 @@ export default ((opts?: Partial<FolderContentOptions>) => {
                     </div>
                     <div class="base-card-body">
                       <p class="base-card-title">{title}</p>
-                      {typeof author === "string" && author.length > 0 ? (
-                        <p class="base-card-meta">{author}</p>
-                      ) : typeof subtitle === "string" && subtitle.length > 0 ? (
-                        <p class="base-card-meta">{subtitle}</p>
-                      ) : null}
                     </div>
                   </a>
                 )
