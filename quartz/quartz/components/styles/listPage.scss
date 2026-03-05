@@ -2,39 +2,45 @@
 
 ul.section-ul {
   list-style: none;
-  margin-top: 2em;
-  padding-left: 0;
+  margin: 1.2rem 0 0;
+  padding: 0;
 }
 
 li.section-li {
-  margin-bottom: 1em;
+  margin: 0.45rem 0;
 
   & > .section {
-    display: grid;
-    grid-template-columns: fit-content(8em) 3fr 1fr;
+    display: flex;
+    align-items: baseline;
+    gap: 0.65rem;
+    text-decoration: none;
 
-    @media all and ($mobile) {
-      & > .tags {
-        display: none;
-      }
+    & > .meta {
+      color: var(--gray);
+      min-width: 4.6rem;
+      font-size: 0.82rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
     }
 
-    & > .desc > h3 > a {
-      background-color: transparent;
+    & > .desc {
+      color: var(--darkgray);
+      text-decoration: underline;
+      text-decoration-thickness: 0.06em;
+      text-underline-offset: 0.14em;
     }
 
-    & .meta {
-      margin: 0 1em 0 0;
-      opacity: 0.6;
+    &:hover > .desc {
+      color: var(--secondary);
     }
   }
 }
 
-// modifications in popover context
-.popover .section {
-  grid-template-columns: fit-content(8em) 1fr !important;
-
-  & > .tags {
-    display: none;
+@media all and ($mobile) {
+  li.section-li > .section {
+    gap: 0.5rem;
+    & > .meta {
+      min-width: 4.2rem;
+    }
   }
 }

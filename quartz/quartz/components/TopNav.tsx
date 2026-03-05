@@ -16,6 +16,7 @@ interface Options {
 
 const defaultOptions: Options = {
   links: [
+    { label: "Projects", href: "/projects" },
     { label: "Sobre", href: "/sobre" },
     { label: "Agora", href: "/agora" },
   ],
@@ -58,7 +59,7 @@ export default ((userOpts?: Partial<Options>) => {
     )
   }
 
-  TopNav.css = concatenateResources(style, Darkmode.css)
+  TopNav.css = concatenateResources(Darkmode.css, style)
   TopNav.beforeDOMLoaded = concatenateResources(Darkmode.beforeDOMLoaded)
   TopNav.afterDOMLoaded = concatenateResources(Darkmode.afterDOMLoaded)
 

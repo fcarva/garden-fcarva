@@ -31,7 +31,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: calc(1rem + 0.22vw);
+  font-size: clamp(1rem, calc(0.92rem + 0.16vw), 1.12rem);
 }
 
 p,
@@ -75,7 +75,7 @@ footer ul li a:hover {
 
 article h1 {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: calc(1.3rem + 0.55vw);
+  font-size: calc(1.18rem + 0.48vw);
   font-weight: 500;
   line-height: 1.25;
   margin-top: 1.5rem;
@@ -84,7 +84,7 @@ article h1 {
 
 article h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: calc(1rem + 0.16vw);
+  font-size: calc(0.96rem + 0.14vw);
   font-weight: 500;
   margin-top: 2rem;
   margin-bottom: 0.6rem;
@@ -146,7 +146,7 @@ body[data-slug="index"] article > *:first-child {
 
 body[data-slug="index"] article h2 {
   margin-top: 2.4rem;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--gray);
   font-weight: 500;
 }
@@ -176,8 +176,18 @@ body[data-slug="index"] article li {
   padding-right: 0.65rem;
 }
 
+.topics-inline {
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.topics-inline .topic-link {
+  color: var(--darkgray);
+  text-decoration: underline;
+}
+
 @media all and (max-width: 800px) {
   body {
-    font-size: 1.03rem;
+    font-size: 1rem;
   }
 }

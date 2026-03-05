@@ -7,12 +7,13 @@ export const sharedPageComponents: SharedLayout = {
   header: [
     Component.TopNav({
       links: [
+        { label: "Projects", href: "/projects" },
         { label: "Sobre", href: "/sobre" },
         { label: "Agora", href: "/agora" },
       ],
     }),
   ],
-  afterBody: [],
+  afterBody: [Component.YouMightEnjoy()],
   footer: Component.Footer({
     links: {
       RSS: "/index.xml",

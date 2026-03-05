@@ -1,0 +1,49 @@
+.you-might-enjoy {
+  margin-top: 2.8rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--lightgray);
+}
+
+.you-might-enjoy > h2 {
+  margin: 0 0 0.8rem;
+  font-size: 0.96rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.you-might-enjoy > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.you-might-enjoy > ul > li {
+  margin: 0.45rem 0;
+}
+
+.you-might-enjoy > ul > li > a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.you-might-enjoy > ul > li > a > .meta {
+  color: var(--gray);
+  min-width: 4.6rem;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.you-might-enjoy > ul > li > a > .title {
+  color: var(--darkgray);
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.14em;
+}
+
+.you-might-enjoy > ul > li > a:hover > .title {
+  color: var(--secondary);
+}
+

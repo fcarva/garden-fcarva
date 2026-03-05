@@ -30,15 +30,27 @@
 }
 
 .top-nav-toggle {
+  display: flex;
+  align-items: center;
   line-height: 1;
 }
 
 .top-nav .darkmode {
+  appearance: none;
+  display: block;
   width: 36px;
+  min-width: 36px;
+  max-width: 36px;
   height: 20px;
+  min-height: 20px;
+  max-height: 20px;
+  box-sizing: border-box;
+  flex: 0 0 36px;
+  background: transparent;
   border: none;
   padding: 0;
   position: relative;
+  cursor: pointer;
 }
 
 .top-nav .darkmode::before {
@@ -50,12 +62,16 @@
   height: 18px;
   border-radius: 999px;
   background: var(--gray);
-  transition: left 0.15s ease;
+  transition: left 0.15s linear;
 }
 
 :root[saved-theme="dark"] .top-nav .darkmode::before {
   left: 17px;
   background: var(--darkgray);
+}
+
+.top-nav .darkmode:hover::before {
+  background: var(--secondary);
 }
 
 .top-nav .darkmode::after {
@@ -75,4 +91,3 @@
     width: min(94vw, 37rem);
   }
 }
-
