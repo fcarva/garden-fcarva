@@ -12,6 +12,7 @@ Hoje uso este garden como base publica para aprender em voz alta e conectar idei
 ### Explore
 
 - [Writing](/escrita)
+- [Biblioteca](/biblioteca)
 - [Projects](/projects)
 - [Agora](/agora)
 - [Topics](/tags)

@@ -31,3 +31,9 @@ socialImage: og-image.jpg
   <li><span class="writing-date">18/11/2025</span> <a href="/escrita/constrangimentos-geram-claridade" class="internal-link">Constrangimentos geram claridade</a></li>
   <li><span class="writing-date">03/07/2025</span> <a href="/escrita/notas-que-escalam" class="internal-link">Notas que escalam</a></li>
 </ul>
+
+<hr class="home-divider" />
+
+<p class="home-muted"><a href="/biblioteca" class="internal-link">Biblioteca</a></p>
+
+<p class="home-muted">Minha base de livros em visualizacao de cards.</p>
