@@ -1,6 +1,6 @@
 import { isFolderPath, resolveRelative } from "../util/path"
 import { QuartzPluginData } from "../plugins/vfile"
-import { getDate } from "./Date"
+import { formatDate, getDate } from "./Date"
 import { QuartzComponent, QuartzComponentProps } from "./types"
 import { GlobalConfiguration } from "../cfg"
 
@@ -58,11 +58,6 @@ type Props = {
 } & QuartzComponentProps
 
 export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort }: Props) => {
-  const formatListDate = (date: Date) => {
-    const month = String(date.getMonth() + 1).padStart(2, "0")
-    return `${date.getFullYear()} - ${month}`
-  }
-
   const sorter = sort ?? byDateAndAlphabeticalFolderFirst(cfg)
   let list = allFiles.sort(sorter)
   if (limit) {
@@ -78,7 +73,7 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
         return (
           <li class="section-li">
             <a href={resolveRelative(fileData.slug!, page.slug!)} class="section internal">
-              {date ? <span class="meta">{formatListDate(date)}</span> : null}
+              {date ? <span class="meta">{formatDate(date, cfg.locale)}</span> : null}
               <span class="desc">{title}</span>
             </a>
           </li>

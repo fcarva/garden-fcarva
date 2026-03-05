@@ -1,6 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { byDateAndAlphabetical } from "./PageList"
-import { getDate } from "./Date"
+import { formatDate, getDate } from "./Date"
 import { resolveRelative, simplifySlug } from "../util/path"
 import { classNames } from "../util/lang"
 import style from "./styles/youMightEnjoy.scss"
@@ -52,11 +52,6 @@ export default ((opts?: Partial<Options>) => {
       return null
     }
 
-    const formatDate = (date: Date) => {
-      const month = String(date.getMonth() + 1).padStart(2, "0")
-      return `${date.getFullYear()} - ${month}`
-    }
-
     return (
       <section class={classNames(displayClass, "you-might-enjoy")}>
         <h2>{options.title}</h2>
@@ -64,7 +59,7 @@ export default ((opts?: Partial<Options>) => {
           {related.map((page) => (
             <li>
               <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
-                {page.dates ? <span class="meta">{formatDate(getDate(cfg, page)!)}</span> : null}
+                {page.dates ? <span class="meta">{formatDate(getDate(cfg, page)!, cfg.locale)}</span> : null}
                 <span class="title">{page.frontmatter?.title}</span>
               </a>
             </li>
