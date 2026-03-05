@@ -135,11 +135,13 @@ footer ul li a {
   color: var(--gray);
 }
 
-body[data-slug="index"] article > *:first-child {
+body[data-slug="index"] article > *:first-child,
+body[data-slug="index"] .home-auto-index > *:first-child {
   margin-top: 0;
 }
 
-body[data-slug="index"] article h2 {
+body[data-slug="index"] article h2,
+body[data-slug="index"] .home-auto-index h2 {
   margin-top: 1.35rem;
   font-size: calc(1.2rem + 0.2vw);
   line-height: 1.3;
@@ -148,13 +150,15 @@ body[data-slug="index"] article h2 {
   letter-spacing: -0.01em;
 }
 
-body[data-slug="index"] article ul {
+body[data-slug="index"] article ul,
+body[data-slug="index"] .home-auto-index ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-body[data-slug="index"] article li {
+body[data-slug="index"] article li,
+body[data-slug="index"] .home-auto-index li {
   margin: 0.45rem 0;
 }
 
@@ -202,11 +206,13 @@ body[data-slug="sobre"] article h3 + ul a:hover {
   color: var(--gray);
 }
 
-body[data-slug="index"] article p.home-muted > a {
+body[data-slug="index"] article p.home-muted > a,
+body[data-slug="index"] .home-auto-index p.home-muted > a {
   color: var(--gray);
 }
 
-body[data-slug="index"] article p.home-muted > a:hover {
+body[data-slug="index"] article p.home-muted > a:hover,
+body[data-slug="index"] .home-auto-index p.home-muted > a:hover {
   color: var(--darkgray);
 }
 

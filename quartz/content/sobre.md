@@ -25,8 +25,6 @@ Você pode acompanhar atualizações por:
 - [RSS](/index.xml)
 - [GitHub](https://github.com/fcarva)
 
-## Colofao
-
-Este site e escrito em Markdown, publicado com Quartz e hospedado na Vercel.
-
-A ideia principal aqui e simplicidade: pouco ruido visual, texto legivel e links que conectam notas.
+## Mural
+![[unnamed.jpg]]
+*Favela (1965) — Heitor dos Prazeres. óleo sobre tela.*

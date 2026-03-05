@@ -12,7 +12,17 @@ export const sharedPageComponents: SharedLayout = {
       ],
     }),
   ],
-  afterBody: [Component.YouMightEnjoy(), Component.SubscribeEmbed()],
+  afterBody: [
+    Component.ConditionalRender({
+      component: Component.Backlinks(),
+      condition: (page) => {
+        const slug = page.fileData.slug ?? ""
+        return slug.startsWith("escrita/") && !slug.endsWith("/index")
+      },
+    }),
+    Component.YouMightEnjoy(),
+    Component.SubscribeEmbed(),
+  ],
   footer: Component.ConditionalRender({
     component: Component.Footer({
       links: {},
@@ -24,6 +34,10 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
+    Component.ConditionalRender({
+      component: Component.HomeAutoIndex(),
+      condition: (page) => page.fileData.slug === "index",
+    }),
     Component.ConditionalRender({
       component: Component.ArticleTitle(),
       condition: (page) => page.fileData.slug !== "index",

@@ -26,6 +26,7 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import HomeAutoIndex from "./HomeAutoIndex"
 
 export {
   ArticleTitle,
@@ -56,4 +57,5 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+  HomeAutoIndex,
 }

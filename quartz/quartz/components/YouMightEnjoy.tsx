@@ -15,9 +15,10 @@ const defaultOptions: Options = {
   title: "You might also enjoy",
 }
 
-const hiddenSlugs = new Set(["/", "index", "tags", "sobre", "agora", "projects", "subscribe"])
+const hiddenSlugs = new Set(["/", "index", "tags", "topics", "sobre", "agora", "projects", "subscribe"])
 
-const shouldHideSlug = (slug: string) => hiddenSlugs.has(slug) || slug.startsWith("tags/")
+const shouldHideSlug = (slug: string) =>
+  hiddenSlugs.has(slug) || slug.startsWith("tags/") || slug.startsWith("topics/")
 
 export default ((opts?: Partial<Options>) => {
   const options: Options = { ...defaultOptions, ...opts }
