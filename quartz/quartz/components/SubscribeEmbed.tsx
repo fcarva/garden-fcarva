@@ -59,15 +59,15 @@ SubscribeEmbed.css = `
 .subscribe-embed .subscribe-kicker {
   margin: 0 0 0.95rem 0;
   color: var(--gray);
-  font-size: 2.2rem;
-  line-height: 1.2;
+  font-size: 1.8rem;
+  line-height: 1.25;
 }
 
 .subscribe-embed .subscribe-copy {
   margin: 0 0 1.6rem 0;
   color: var(--darkgray);
   line-height: 1.45;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .subscribe-embed .subscribe-form {
@@ -96,7 +96,7 @@ SubscribeEmbed.css = `
   border-bottom: 1px solid var(--lightgray);
   border-radius: 0;
   padding: 0.65rem 0;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   outline: none;
 }
 
@@ -113,7 +113,7 @@ SubscribeEmbed.css = `
   border-radius: 0.3rem;
   background: var(--dark);
   color: var(--light);
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1;
   padding: 0.85rem 1.25rem;
   cursor: pointer;
@@ -125,7 +125,7 @@ SubscribeEmbed.css = `
 
 @media all and (max-width: 800px) {
   .subscribe-embed .subscribe-kicker {
-    font-size: 1.6rem;
+    font-size: 1.45rem;
   }
 
   .subscribe-embed .subscribe-form {
@@ -139,7 +139,7 @@ SubscribeEmbed.css = `
   }
 
   .subscribe-embed input[type="email"] {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 }
 `
