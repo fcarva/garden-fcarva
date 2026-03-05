@@ -202,6 +202,14 @@ body[data-slug="sobre"] article h3 + ul a:hover {
   color: var(--gray);
 }
 
+body[data-slug="index"] article p.home-muted > a {
+  color: var(--gray);
+}
+
+body[data-slug="index"] article p.home-muted > a:hover {
+  color: var(--darkgray);
+}
+
 .home-topics-links a,
 .home-writing-list a {
   text-decoration: underline;
