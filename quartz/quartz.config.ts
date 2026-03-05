@@ -29,26 +29,28 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
+          // Flexoki light (close to stephango.com / minimal.guide)
           light: "#FFFCF0",
           lightgray: "#E6E4D9",
           gray: "#6F6E69",
           darkgray: "#100F0F",
           dark: "#100F0F",
           secondary: "#24837B",
-          tertiary: "#3AA99F",
+          tertiary: "#2F968D",
           highlight: "#F6E2A0",
           textHighlight: "#FAEEC688",
         },
         darkMode: {
+          // Flexoki dark (close to stephango.com / minimal.guide)
           light: "#100F0F",
           lightgray: "#282726",
           gray: "#878580",
           darkgray: "#CECDC3",
           dark: "#FFFCF0",
           secondary: "#3AA99F",
-          tertiary: "#5ABDAC",
+          tertiary: "#2F968D",
           highlight: "#3A2D04",
-          textHighlight: "#24837B66",
+          textHighlight: "#1E5F5B4D",
         },
       },
     },

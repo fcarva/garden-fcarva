@@ -41,10 +41,15 @@ td {
 }
 
 a {
+  color: var(--darkgray);
   font-weight: 400;
   text-decoration: underline;
   text-decoration-thickness: 0.06em;
   text-underline-offset: 0.14em;
+}
+
+a:hover {
+  color: var(--secondary);
 }
 
 a.internal {
@@ -57,6 +62,15 @@ a.internal {
 .top-nav a,
 footer a {
   text-decoration: none;
+}
+
+.top-nav-links a {
+  color: var(--gray);
+}
+
+.top-nav-links a:hover,
+footer ul li a:hover {
+  color: var(--darkgray);
 }
 
 article h1 {
@@ -149,6 +163,7 @@ body[data-slug="index"] article li {
 
 .home-divider {
   margin: 2.4rem 0;
+  background-color: var(--lightgray);
 }
 
 .home-muted {
