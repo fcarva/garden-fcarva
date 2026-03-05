@@ -2,8 +2,28 @@
 title: Sobre
 ---
 
-Escrevo sobre design de produto, sistemas de conhecimento e escrita.
+## Sobre mim
 
-Este garden foi feito em Quartz com uma interface minima, foco em leitura e navegacao rapida.
+Sou o fcarva. Escrevo sobre design de produto, sistemas de conhecimento e escrita aplicada.
 
-Se quiser falar comigo, abra uma issue no GitHub ou me mande mensagem nas redes.
+Hoje uso este garden como base publica para aprender em voz alta e conectar ideias de longo prazo.
+
+### Explore
+
+- [Writing](/escrita)
+- [Projects](/projects)
+- [Agora](/agora)
+- [Topics](/tags)
+
+## Em outros lugares
+
+Voce pode acompanhar atualizacoes por:
+
+- [RSS](/index.xml)
+- [GitHub](https://github.com/fcarva)
+
+## Colofao
+
+Este site e escrito em Markdown, publicado com Quartz e hospedado na Vercel.
+
+A ideia principal aqui e simplicidade: pouco ruido visual, texto legivel e links que conectam notas.

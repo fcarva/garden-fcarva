@@ -35,55 +35,49 @@
   line-height: 1;
 }
 
-.top-nav .darkmode {
+.top-nav .top-theme-toggle {
   appearance: none;
-  display: block;
-  width: 36px;
-  min-width: 36px;
-  max-width: 36px;
-  height: 20px;
-  min-height: 20px;
-  max-height: 20px;
+  position: relative;
+  width: 42px;
+  height: 26px;
+  min-width: 42px;
+  max-width: 42px;
+  min-height: 26px;
+  max-height: 26px;
   box-sizing: border-box;
-  flex: 0 0 36px;
-  background: transparent;
   border: none;
   padding: 0;
-  position: relative;
+  background: transparent;
+  flex: 0 0 42px;
   cursor: pointer;
 }
 
-.top-nav .darkmode::before {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  background: var(--gray);
-  transition: left 0.15s linear;
-}
-
-:root[saved-theme="dark"] .top-nav .darkmode::before {
-  left: 17px;
-  background: var(--darkgray);
-}
-
-.top-nav .darkmode:hover::before {
-  background: var(--secondary);
-}
-
-.top-nav .darkmode::after {
-  content: "";
+.top-nav .top-theme-toggle .toggle-track {
   position: absolute;
   inset: 0;
   border: 1px solid var(--lightgray);
   border-radius: 999px;
+  background: color-mix(in srgb, var(--light) 92%, var(--dark) 8%);
 }
 
-.top-nav .darkmode > svg {
-  display: none;
+.top-nav .top-theme-toggle .toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--gray);
+  transition: left 0.15s linear, background-color 0.15s linear;
+}
+
+.top-nav .top-theme-toggle:hover .toggle-thumb {
+  background: var(--secondary);
+}
+
+:root[saved-theme="dark"] .top-nav .top-theme-toggle .toggle-thumb {
+  left: 21px;
+  background: var(--darkgray);
 }
 
 @media all and (max-width: 800px) {
@@ -91,3 +85,4 @@
     width: min(94vw, 37rem);
   }
 }
+

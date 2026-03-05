@@ -1,9 +1,10 @@
 import { pathToRoot } from "../util/path"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import DarkmodeConstructor from "./Darkmode"
-import { concatenateResources } from "../util/resources"
 import { classNames } from "../util/lang"
+import { i18n } from "../i18n"
 import style from "./styles/topNav.scss"
+// @ts-ignore
+import darkmodeScript from "./scripts/darkmode.inline"
 
 interface NavLink {
   label: string
@@ -16,7 +17,6 @@ interface Options {
 
 const defaultOptions: Options = {
   links: [
-    { label: "Projects", href: "/projects" },
     { label: "Sobre", href: "/sobre" },
     { label: "Agora", href: "/agora" },
   ],
@@ -27,8 +27,6 @@ export default ((userOpts?: Partial<Options>) => {
     ...defaultOptions,
     ...userOpts,
   }
-
-  const Darkmode = DarkmodeConstructor()
 
   const TopNav: QuartzComponent = (props: QuartzComponentProps) => {
     const { fileData, cfg, displayClass } = props
@@ -53,15 +51,22 @@ export default ((userOpts?: Partial<Options>) => {
           ))}
         </div>
         <div class="top-nav-toggle">
-          <Darkmode {...props} />
+          <button
+            class="darkmode top-theme-toggle"
+            type="button"
+            aria-label={i18n(cfg.locale).components.themeToggle.darkMode}
+            title={i18n(cfg.locale).components.themeToggle.darkMode}
+          >
+            <span class="toggle-track"></span>
+            <span class="toggle-thumb"></span>
+          </button>
         </div>
       </nav>
     )
   }
 
-  TopNav.css = concatenateResources(Darkmode.css, style)
-  TopNav.beforeDOMLoaded = concatenateResources(Darkmode.beforeDOMLoaded)
-  TopNav.afterDOMLoaded = concatenateResources(Darkmode.afterDOMLoaded)
+  TopNav.css = style
+  TopNav.beforeDOMLoaded = darkmodeScript
 
   return TopNav
 }) satisfies QuartzComponentConstructor<Partial<Options>>

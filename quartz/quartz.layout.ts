@@ -7,7 +7,6 @@ export const sharedPageComponents: SharedLayout = {
   header: [
     Component.TopNav({
       links: [
-        { label: "Projects", href: "/projects" },
         { label: "Sobre", href: "/sobre" },
         { label: "Agora", href: "/agora" },
       ],
