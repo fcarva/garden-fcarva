@@ -47,7 +47,9 @@ const HomeAutoIndex: QuartzComponent = ({ allFiles, fileData, cfg, displayClass 
   return (
     <section class={classNames(displayClass, "home-auto-index")}>
       <p class="home-muted">
-        <a href={resolveRelative(fileData.slug, latest.slug!)}>Recentes</a>
+        <a class="home-section-link" href={resolveRelative(fileData.slug, latest.slug!)}>
+          Recentes
+        </a>
       </p>
 
       <h2>
@@ -62,7 +64,9 @@ const HomeAutoIndex: QuartzComponent = ({ allFiles, fileData, cfg, displayClass 
       <hr class="home-divider" />
 
       <p class="home-muted">
-        <a href={resolveRelative(fileData.slug, "topics" as FullSlug)}>Topics</a>
+        <a class="home-section-link" href={resolveRelative(fileData.slug, "topics" as FullSlug)}>
+          Tópicos
+        </a>
       </p>
       <p class="home-topics-links">
         {topicTags.map((tag, index) => (
@@ -76,7 +80,9 @@ const HomeAutoIndex: QuartzComponent = ({ allFiles, fileData, cfg, displayClass 
       <hr class="home-divider" />
 
       <p class="home-muted">
-        <a href={resolveRelative(fileData.slug, "escrita" as FullSlug)}>Writing</a>
+        <a class="home-section-link" href={resolveRelative(fileData.slug, "escrita" as FullSlug)}>
+          Escrita
+        </a>
       </p>
 
       <ul class="home-writing-list">

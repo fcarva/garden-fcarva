@@ -77,7 +77,7 @@ export default {
     },
     tagContent: {
       tag: "Tag",
-      tagIndex: "Topics",
+      tagIndex: "Tópicos",
       itemsUnderTag: ({ count }) =>
         count === 1 ? "1 item com esta tag." : `${count} itens com esta tag.`,
       showingFirst: ({ count }) => `Mostrando as ${count} primeiras tags.`,
