@@ -1,5 +1,6 @@
 ---
 title: Notas que escalam
+socialImage: og-image.jpg
 date: 2025-07-03
 tags:
   - escrita

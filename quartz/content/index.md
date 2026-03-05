@@ -1,5 +1,6 @@
 ---
 title: Home
+socialImage: og-image.jpg
 ---
 
 <p class="home-muted"><a href="/escrita/primeiro-ensaio" class="internal-link">Latest</a></p>

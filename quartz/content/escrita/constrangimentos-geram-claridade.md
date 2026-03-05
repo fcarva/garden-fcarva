@@ -1,5 +1,6 @@
 ---
 title: Constrangimentos geram claridade
+socialImage: og-image.jpg
 date: 2025-11-18
 tags:
   - design

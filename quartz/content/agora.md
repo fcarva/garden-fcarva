@@ -1,5 +1,6 @@
 ---
 title: Agora
+socialImage: og-image.jpg
 ---
 
 Atualizado em March 5, 2026.

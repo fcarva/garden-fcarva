@@ -1,5 +1,6 @@
 ---
 title: Projects
+socialImage: og-image.jpg
 ---
 
 - **Quartz Garden** - site e sistema de notas para publicacao continua.

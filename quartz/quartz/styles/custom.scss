@@ -163,6 +163,41 @@ body[data-slug="index"] article li {
   margin: 0.45rem 0;
 }
 
+body[data-slug="sobre"] article h2 {
+  margin-top: 1.35rem;
+  margin-bottom: 0.35rem;
+  font-size: calc(0.9rem + 0.1vw);
+}
+
+body[data-slug="sobre"] article h3 {
+  margin-top: 1.05rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+body[data-slug="sobre"] article p,
+body[data-slug="sobre"] article li {
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+body[data-slug="sobre"] article ul {
+  margin-top: 0.2rem;
+  margin-bottom: 0.9rem;
+}
+
+body[data-slug="sobre"] article h3 + ul a {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.16em;
+}
+
+body[data-slug="sobre"] article h3 + ul a:hover {
+  color: var(--tertiary);
+}
+
 .home-divider {
   margin: 2.4rem 0;
   background-color: var(--lightgray);

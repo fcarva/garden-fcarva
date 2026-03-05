@@ -1,5 +1,6 @@
 ---
 title: Sobre
+socialImage: og-image.jpg
 ---
 
 ## Sobre mim
