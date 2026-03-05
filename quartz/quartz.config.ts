@@ -8,10 +8,10 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "fcarva-notes",
+    pageTitle: "fcarva",
     pageTitleSuffix: "",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: false,
     analytics: {
       provider: "plausible",
     },
@@ -29,27 +29,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#fffbef",        // primary background
-          lightgray: "#edeada",    // UI border/subtle
-          gray: "#5c6a72",        // graph links / heavier borders
-          darkgray: "#403E3C",    // body text
-          dark: "#282726",        // header text / icons
-          secondary: "#569d79",   // link colour
-          tertiary: "#5a93a2",    // hover states / visited nodes
-          highlight: "#f3b931",   // internal link bg / code highlight
+          light: "#FFFCF0",
+          lightgray: "#E6E4D9",
+          gray: "#6F6E69",
+          darkgray: "#100F0F",
+          dark: "#100F0F",
+          secondary: "#24837B",
+          tertiary: "#3AA99F",
+          highlight: "#F6E2A0",
           textHighlight: "#FAEEC688",
         },
         darkMode: {
-          // approximated Everforest dark palette
-          light: "#2b3339",
-          lightgray: "#3d4c07",
-          gray: "#939f91",
-          darkgray: "#d3c6aa",
-          dark: "#f2efdf",
-          secondary: "#35a77c",
-          tertiary: "#569d79",
-          highlight: "#468893",
-          textHighlight: "#bef2dd88",
+          light: "#100F0F",
+          lightgray: "#282726",
+          gray: "#878580",
+          darkgray: "#CECDC3",
+          dark: "#FFFCF0",
+          secondary: "#3AA99F",
+          tertiary: "#5ABDAC",
+          highlight: "#3A2D04",
+          textHighlight: "#24837B66",
         },
       },
     },

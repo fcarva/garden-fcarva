@@ -4,14 +4,19 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  // put site title in header for a clean top bar like stephango
-  header: [Component.PageTitle()],
+  header: [
+    Component.TopNav({
+      links: [
+        { label: "Sobre", href: "/sobre" },
+        { label: "Agora", href: "/agora" },
+      ],
+    }),
+  ],
   afterBody: [],
   footer: Component.Footer({
-    // you can remove or customise these links as desired for minimal look
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      RSS: "/index.xml",
+      GitHub: "https://github.com/fcarva",
     },
   }),
 }
@@ -20,47 +25,23 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
+      component: Component.ArticleTitle(),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
-    Component.TagList(),
-  ],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        // reader mode can be omitted if you want extra minimalism
-      ],
+    Component.ConditionalRender({
+      component: Component.ContentMeta({
+        showComma: false,
+      }),
+      condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.Explorer(),
   ],
-  right: [], // drop graph/toc/backlinks for a cleaner single-column look
+  left: [],
+  right: [],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
-    Component.Explorer(),
-  ],
+  beforeBody: [Component.ArticleTitle()],
+  left: [],
   right: [],
 }

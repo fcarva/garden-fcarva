@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd quartz && npm install && npx quartz build",
+  "buildCommand": "cd quartz && npm install && node quartz/bootstrap-cli.mjs build",
   "outputDirectory": "quartz/public",
   "cleanUrls": true
 }

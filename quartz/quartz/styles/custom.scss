@@ -1,3 +1,168 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+.page {
+  max-width: 100%;
+}
+
+.page > #quartz-body {
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: auto auto auto !important;
+  grid-template-areas:
+    "grid-header"
+    "grid-center"
+    "grid-footer" !important;
+  row-gap: 0.5rem;
+}
+
+.page > #quartz-body > .sidebar {
+  display: none !important;
+}
+
+.page > #quartz-body .page-header {
+  margin: 1rem 0 0;
+}
+
+.page > #quartz-body .center,
+.page > #quartz-body footer {
+  width: min(92vw, 37rem);
+  min-width: 0;
+  margin: 0 auto;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: calc(1rem + 0.22vw);
+}
+
+p,
+li,
+td {
+  line-height: 1.6;
+}
+
+a {
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.14em;
+}
+
+a.internal {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  line-height: inherit;
+}
+
+.top-nav a,
+footer a {
+  text-decoration: none;
+}
+
+article h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: calc(1.3rem + 0.55vw);
+  font-weight: 500;
+  line-height: 1.25;
+  margin-top: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+article h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: calc(1rem + 0.16vw);
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+code,
+pre {
+  font-family: ui-monospace, "Cascadia Code", "IBM Plex Mono", Menlo, Monaco, Consolas, monospace;
+}
+
+.content-meta {
+  color: var(--gray);
+  font-size: 0.88rem;
+}
+
+.content-meta > * + *::before {
+  content: " - ";
+  color: var(--gray);
+}
+
+footer {
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  opacity: 1;
+}
+
+footer p {
+  color: var(--gray);
+}
+
+footer ul {
+  list-style: none;
+  margin: 0.2rem 0 0;
+  padding: 0;
+  display: flex;
+  gap: 0.9rem;
+}
+
+footer ul li {
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li a {
+  color: var(--gray);
+}
+
+body[data-slug="index"] article > *:first-child {
+  margin-top: 0;
+}
+
+body[data-slug="index"] article h2 {
+  margin-top: 2.4rem;
+  font-size: 0.95rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+body[data-slug="index"] article ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body[data-slug="index"] article li {
+  margin: 0.45rem 0;
+}
+
+.home-divider {
+  margin: 2.4rem 0;
+}
+
+.home-muted {
+  color: var(--gray);
+}
+
+.writing-date {
+  color: var(--gray);
+  font-variant-numeric: tabular-nums;
+  padding-right: 0.65rem;
+}
+
+@media all and (max-width: 800px) {
+  body {
+    font-size: 1.03rem;
+  }
+}

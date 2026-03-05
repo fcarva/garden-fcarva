@@ -1,0 +1,78 @@
+.top-nav {
+  width: min(92vw, 37rem);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.2rem 0;
+}
+
+.top-nav-title {
+  color: var(--dark);
+  font-family: var(--headerFont);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.top-nav-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    color: var(--gray);
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
+
+.top-nav-toggle {
+  line-height: 1;
+}
+
+.top-nav .darkmode {
+  width: 36px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+.top-nav .darkmode::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--gray);
+  transition: left 0.15s ease;
+}
+
+:root[saved-theme="dark"] .top-nav .darkmode::before {
+  left: 17px;
+  background: var(--darkgray);
+}
+
+.top-nav .darkmode::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--lightgray);
+  border-radius: 999px;
+}
+
+.top-nav .darkmode > svg {
+  display: none;
+}
+
+@media all and (max-width: 800px) {
+  .top-nav {
+    width: min(94vw, 37rem);
+  }
+}
+

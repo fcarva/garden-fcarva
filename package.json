@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "cd quartz && npm install && npm run quartz -- build",
-    "dev": "cd quartz && npm run quartz -- build --serve"
+    "build": "cd quartz && npm install && node quartz/bootstrap-cli.mjs build",
+    "dev": "cd quartz && npm install && node quartz/bootstrap-cli.mjs build --serve"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   }
 }
