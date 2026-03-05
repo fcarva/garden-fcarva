@@ -1,0 +1,15 @@
+# Local/editor files
+.DS_Store
+Thumbs.db
+
+# Dependencies/build output
+node_modules/
+quartz/node_modules/
+quartz/public/
+quartz/.quartz-cache/
+
+# Accidental root-level content copies (use quartz/content instead)
+/Biblioteca.base
+/escrita.md
+/tags.md
+/escrita/
