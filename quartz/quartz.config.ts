@@ -19,7 +19,7 @@ const config: QuartzConfig = {
     locale: "pt-BR",
     baseUrl: "fcarva.vercel.app",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "modified",
+    defaultDateType: "published",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,

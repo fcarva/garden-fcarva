@@ -1,5 +1,6 @@
 ---
 title: Constrangimentos geram claridade
+description: Como limites de escopo ajudam a tomar melhores decisoes de escrita e produto.
 socialImage: og-image.jpg
 date: 2025-11-18
 tags:

@@ -8,7 +8,8 @@ const ArticleTitle: QuartzComponent = ({ fileData, displayClass, cfg }: QuartzCo
   const folderPrefix = `${i18n(cfg.locale).pages.folderContent.folder}: `
 
   let title = rawTitle
-  if (fileData.slug?.startsWith("tags/") && rawTitle?.startsWith(tagPrefix)) {
+  const isTagLikePage = fileData.slug?.startsWith("tags/") || fileData.slug?.startsWith("topics/")
+  if (isTagLikePage && rawTitle?.startsWith(tagPrefix)) {
     title = rawTitle.slice(tagPrefix.length)
   } else if (fileData.slug?.endsWith("/index") && rawTitle?.startsWith(folderPrefix)) {
     title = rawTitle.slice(folderPrefix.length)

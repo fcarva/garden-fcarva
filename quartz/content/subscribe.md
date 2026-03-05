@@ -1,5 +1,6 @@
 ---
 title: Subscribe
+description: Assine para receber novos textos por email e acompanhe por RSS.
 socialImage: og-image.jpg
 ---
 

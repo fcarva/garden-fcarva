@@ -1,27 +1,32 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
-import { simplifySlug } from "../util/path"
+import { FullSlug, joinSegments, pathToRoot, resolveRelative, simplifySlug } from "../util/path"
 
-const shouldHideSlug = (slug: string) => slug === "subscribe" || slug.startsWith("tags/")
+const shouldHideSlug = (slug: string) =>
+  slug === "subscribe" || slug.startsWith("tags/") || slug.startsWith("topics/")
 
 const SubscribeEmbed: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
-  if (!fileData.filePath) {
+  if (!fileData.filePath || !fileData.slug) {
     return null
   }
 
-  const slug = simplifySlug(fileData.slug!)
+  const slug = simplifySlug(fileData.slug)
   if (shouldHideSlug(slug)) {
     return null
   }
 
+  const subscribeHref = resolveRelative(fileData.slug, "subscribe" as FullSlug)
+  const rssHref = joinSegments(pathToRoot(fileData.slug), "index.xml")
+  const aboutHref = resolveRelative(fileData.slug, "sobre" as FullSlug)
+
   return (
     <section class={classNames(displayClass, "subscribe-embed")}>
       <p class="subscribe-kicker">
-        <a href="/subscribe">Receive my updates</a>
+        <a href={subscribeHref}>Receive my updates</a>
       </p>
       <p class="subscribe-copy">
-        Follow me via email, <a href="/index.xml">RSS</a>, <a href="https://x.com/fcarva">Twitter</a>,
-        and <a href="/sobre">other options</a>
+        Follow me via email, <a href={rssHref}>RSS</a>, <a href="https://x.com/fcarva">Twitter</a>,
+        and <a href={aboutHref}>other options</a>
       </p>
       <form
         class="subscribe-form"

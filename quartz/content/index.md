@@ -1,5 +1,6 @@
 ---
 title: Home
+description: Garden de textos autorais sobre economia, design, sistemas e processo de escrita.
 socialImage: og-image.jpg
 ---
 
@@ -9,7 +10,7 @@ socialImage: og-image.jpg
 
 <p class="home-muted small">05/03/2026 - 8 min read</p>
 
-<p class="home-muted">Um site minimo para publicar ideias, experimentos e notas permanentes.</p>
+<p class="home-muted">Uma proposta de governanca com stakeholders como resposta a concentracao de poder de mercado.</p>
 
 <hr class="home-divider" />
 
@@ -17,9 +18,9 @@ socialImage: og-image.jpg
 
 <p class="home-topics-links">
   <a href="/topics/escrita" class="internal-link">escrita</a>,
+  <a href="/topics/sistemas" class="internal-link">sistemas</a>,
   <a href="/topics/design" class="internal-link">design</a>,
-  <a href="/topics/produto" class="internal-link">produto</a>,
-  <a href="/topics/sistemas" class="internal-link">sistemas</a>
+  <a href="/topics/produto" class="internal-link">produto</a>
 </p>
 
 <hr class="home-divider" />

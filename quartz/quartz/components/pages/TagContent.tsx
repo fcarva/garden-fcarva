@@ -1,7 +1,7 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 import style from "../styles/listPage.scss"
 import { PageList, SortFn } from "../PageList"
-import { FullSlug, getAllSegmentPrefixes, resolveRelative, simplifySlug } from "../../util/path"
+import { FullSlug, getAllSegmentPrefixes, joinSegments, resolveRelative, simplifySlug } from "../../util/path"
 import { QuartzPluginData } from "../../plugins/vfile"
 import { Root } from "hast"
 import { htmlToJsx } from "../../util/jsx"
@@ -24,11 +24,16 @@ export default ((opts?: Partial<TagContentOptions>) => {
     const { tree, fileData, allFiles } = props
     const slug = fileData.slug
 
-    if (!(slug?.startsWith("tags/") || slug === "tags")) {
+    const isTagPage = slug?.startsWith("tags/") || slug === "tags"
+    const isTopicPage = slug?.startsWith("topics/") || slug === "topics"
+    if (!(isTagPage || isTopicPage)) {
       throw new Error(`Component "TagContent" tried to render a non-tag page: ${slug}`)
     }
 
-    const tag = simplifySlug(slug.slice("tags/".length) as FullSlug)
+    const basePath = isTopicPage ? "topics" : "tags"
+    const tag = simplifySlug(
+      (slug === basePath ? "index" : slug.slice(`${basePath}/`.length)) as FullSlug,
+    )
     const allPagesWithTag = (tag: string) =>
       allFiles.filter((file) =>
         (file.frontmatter?.tags ?? []).flatMap(getAllSegmentPrefixes).includes(tag),
@@ -52,7 +57,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
           <article class={classes}>{content}</article>
           <p class="topics-inline">
             {tags.map((tag, index) => {
-              const href = resolveRelative(fileData.slug!, `/topics/${tag}` as FullSlug)
+              const href = resolveRelative(fileData.slug!, joinSegments("topics", tag) as FullSlug)
               return (
                 <>
                   <a class="internal topic-link" href={href}>

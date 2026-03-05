@@ -1,6 +1,7 @@
 # Local/editor files
 .DS_Store
 Thumbs.db
+.obsidian/
 
 # Dependencies/build output
 node_modules/

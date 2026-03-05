@@ -1,5 +1,6 @@
 ---
 title: Sobre
+description: Quem eu sou, o que escrevo e como acompanhar as atualizacoes do garden.
 socialImage: og-image.jpg
 ---
 ## Sobre mim
@@ -11,7 +12,7 @@ Esse espaço é um *jardim* de conhecimento na qual eu cultivo ideias de longo p
 ### Explore
 
 - [Textos](/escrita)
-- [Tópicos](/tags)
+- [Tópicos](/topics)
 - [Biblioteca](/biblioteca)
 - [Projetos](/projects)
 - [Agora](/agora)

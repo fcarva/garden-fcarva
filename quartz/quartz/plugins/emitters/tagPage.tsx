@@ -17,6 +17,8 @@ interface TagPageOptions extends FullPageLayout {
   sort?: (f1: QuartzPluginData, f2: QuartzPluginData) => number
 }
 
+const tagRoutes = ["tags", "topics"] as const
+
 function computeTagInfo(
   allFiles: QuartzPluginData[],
   content: ProcessedContent[],
@@ -31,10 +33,7 @@ function computeTagInfo(
 
   const tagDescriptions: Record<string, ProcessedContent> = Object.fromEntries(
     [...tags].map((tag) => {
-      const title =
-        tag === "index"
-          ? i18n(locale).pages.tagContent.tagIndex
-          : `${i18n(locale).pages.tagContent.tag}: ${tag}`
+      const title = tag === "index" ? i18n(locale).pages.tagContent.tagIndex : tag
       return [
         tag,
         defaultProcessedContent({
@@ -48,13 +47,17 @@ function computeTagInfo(
   // Update with actual content if available
   for (const [tree, file] of content) {
     const slug = file.data.slug!
-    if (slug.startsWith("tags/")) {
-      const tag = slug.slice("tags/".length)
-      if (tags.has(tag)) {
-        tagDescriptions[tag] = [tree, file]
-        if (file.data.frontmatter?.title === tag) {
-          file.data.frontmatter.title = `${i18n(locale).pages.tagContent.tag}: ${tag}`
-        }
+    const isTagRoute = tagRoutes.some((route) => slug.startsWith(`${route}/`))
+    if (!isTagRoute) {
+      continue
+    }
+
+    const tag = slug.split("/").slice(1).join("/")
+    if (tags.has(tag)) {
+      tagDescriptions[tag] = [tree, file]
+      const currentTitle = file.data.frontmatter?.title
+      if (currentTitle === `${i18n(locale).pages.tagContent.tag}: ${tag}`) {
+        file.data.frontmatter.title = tag
       }
     }
   }
@@ -64,19 +67,24 @@ function computeTagInfo(
 
 async function processTagPage(
   ctx: BuildCtx,
+  route: (typeof tagRoutes)[number],
   tag: string,
   tagContent: ProcessedContent,
   allFiles: QuartzPluginData[],
   opts: FullPageLayout,
   resources: StaticResources,
 ) {
-  const slug = joinSegments("tags", tag) as FullSlug
+  const slug = joinSegments(route, tag) as FullSlug
   const [tree, file] = tagContent
+  const fileData = {
+    ...file.data,
+    slug,
+  }
   const cfg = ctx.cfg.configuration
   const externalResources = pageResources(pathToRoot(slug), resources)
   const componentData: QuartzComponentProps = {
     ctx,
-    fileData: file.data,
+    fileData,
     externalResources,
     cfg,
     children: [],
@@ -88,7 +96,7 @@ async function processTagPage(
   return write({
     ctx,
     content,
-    slug: file.data.slug!,
+    slug,
     ext: ".html",
   })
 }
@@ -127,7 +135,9 @@ export const TagPage: QuartzEmitterPlugin<Partial<TagPageOptions>> = (userOpts) 
       const [tags, tagDescriptions] = computeTagInfo(allFiles, content, cfg.locale)
 
       for (const tag of tags) {
-        yield processTagPage(ctx, tag, tagDescriptions[tag], allFiles, opts, resources)
+        for (const route of tagRoutes) {
+          yield processTagPage(ctx, route, tag, tagDescriptions[tag], allFiles, opts, resources)
+        }
       }
     },
     async *partialEmit(ctx, content, resources, changeEvents) {
@@ -141,10 +151,12 @@ export const TagPage: QuartzEmitterPlugin<Partial<TagPageOptions>> = (userOpts) 
         const slug = changeEvent.file.data.slug!
 
         // If it's a tag page itself that changed
-        if (slug.startsWith("tags/")) {
-          const tag = slug.slice("tags/".length)
-          affectedTags.add(tag)
-        }
+        tagRoutes.forEach((route) => {
+          if (slug.startsWith(`${route}/`)) {
+            const tag = slug.slice(`${route}/`.length)
+            affectedTags.add(tag)
+          }
+        })
 
         // If a file with tags changed, we need to update those tag pages
         const fileTags = changeEvent.file.data.frontmatter?.tags ?? []
@@ -161,7 +173,9 @@ export const TagPage: QuartzEmitterPlugin<Partial<TagPageOptions>> = (userOpts) 
 
         for (const tag of affectedTags) {
           if (tagDescriptions[tag]) {
-            yield processTagPage(ctx, tag, tagDescriptions[tag], allFiles, opts, resources)
+            for (const route of tagRoutes) {
+              yield processTagPage(ctx, route, tag, tagDescriptions[tag], allFiles, opts, resources)
+            }
           }
         }
       }

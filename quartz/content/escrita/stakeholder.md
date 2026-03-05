@@ -1,5 +1,6 @@
 ---
 title: Stakeholder governance and market power
+description: Stakeholder governance como resposta institucional para abusos de poder de mercado.
 socialImage: og-image.jpg
 date: 2026-03-05
 tags:
