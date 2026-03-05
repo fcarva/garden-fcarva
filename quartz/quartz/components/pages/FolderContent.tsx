@@ -186,7 +186,7 @@ const cardImageUrl = (page: QuartzPluginData, imageField?: string): string | und
 
 const baseCardsStyle = `
 .base-cards-view {
-  margin-top: 1rem;
+  margin-top: 0.85rem;
 }
 
 .base-cards-header {
@@ -197,8 +197,8 @@ const baseCardsStyle = `
 
 .base-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
-  gap: 1.15rem 0.9rem;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 0.9rem 0.75rem;
 }
 
 .base-card {
@@ -209,21 +209,22 @@ const baseCardsStyle = `
 
 .base-card-cover {
   border: none;
-  border-radius: 0.45rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   background: transparent;
-  aspect-ratio: var(--cards-aspect-ratio, 1.5);
+  aspect-ratio: calc(1 / var(--cards-aspect-ratio, 1.55));
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 120ms ease, filter 120ms ease;
+  transition: transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
 }
 
 .base-card-cover img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
 }
 
 .base-card-placeholder {
@@ -233,7 +234,7 @@ const baseCardsStyle = `
 }
 
 .base-card-body {
-  margin-top: 0.42rem;
+  margin-top: 0.38rem;
 }
 
 .base-card-title {
@@ -242,10 +243,12 @@ const baseCardsStyle = `
   font-size: 0.84rem;
   line-height: 1.25;
   font-weight: 560;
+  text-align: center;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  min-height: 2.5em;
 }
 
 .base-card:hover .base-card-title {
@@ -255,6 +258,11 @@ const baseCardsStyle = `
 .base-card:hover .base-card-cover {
   transform: translateY(-1px);
   filter: saturate(1.02);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--darkgray) 14%, transparent);
+}
+
+body[data-slug="biblioteca/index"] #quartz-body .center {
+  max-width: min(1200px, 100%);
 }
 `
 
@@ -328,7 +336,13 @@ export default ((opts?: Partial<FolderContentOptions>) => {
     const baseConfig = folderSlug ? readBaseConfig(folderSlug) : null
     const cardsView = baseConfig?.views?.find((view) => view.type === "cards")
     const filteredPages = applyBaseFilters(allPagesInFolder, baseConfig)
-    const displayPages = [...filteredPages].sort(options.sort ?? byDateAndAlphabeticalFolderFirst(cfg))
+    const displayPages = cardsView
+      ? [...filteredPages].sort((a, b) => {
+          const aTitle = (a.frontmatter?.title ?? "").toLocaleLowerCase("pt-BR")
+          const bTitle = (b.frontmatter?.title ?? "").toLocaleLowerCase("pt-BR")
+          return aTitle.localeCompare(bTitle, "pt-BR")
+        })
+      : [...filteredPages].sort(options.sort ?? byDateAndAlphabeticalFolderFirst(cfg))
     const listProps = {
       ...props,
       sort: options.sort,
