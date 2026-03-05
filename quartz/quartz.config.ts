@@ -29,26 +29,27 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#fdf6e3",
-          lightgray: "#e9e1c8",
-          gray: "#93a1a1",
-          darkgray: "#586e75",
-          dark: "#073642",
-          secondary: "#268bd2",
-          tertiary: "#2aa198",
-          highlight: "rgba(38, 139, 210, 0.1)",
-          textHighlight: "#b5890088",
+          light: "#fffbef",        // primary background
+          lightgray: "#edeada",    // UI border/subtle
+          gray: "#5c6a72",        // graph links / heavier borders
+          darkgray: "#403E3C",    // body text
+          dark: "#282726",        // header text / icons
+          secondary: "#569d79",   // link colour
+          tertiary: "#5a93a2",    // hover states / visited nodes
+          highlight: "#f3b931",   // internal link bg / code highlight
+          textHighlight: "#FAEEC688",
         },
         darkMode: {
-          light: "#002b36",
-          lightgray: "#19414B",
-          gray: "#586e75",
-          darkgray: "#93a1a1",
-          dark: "#eee8d5",
-          secondary: "#268bd2",
-          tertiary: "#2aa198",
-          highlight: "rgba(38, 139, 210, 0.1)",
-          textHighlight: "#b3aa0288",
+          // approximated Everforest dark palette
+          light: "#2b3339",
+          lightgray: "#3d4c07",
+          gray: "#939f91",
+          darkgray: "#d3c6aa",
+          dark: "#f2efdf",
+          secondary: "#35a77c",
+          tertiary: "#569d79",
+          highlight: "#468893",
+          textHighlight: "#bef2dd88",
         },
       },
     },

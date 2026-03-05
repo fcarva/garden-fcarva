@@ -4,9 +4,11 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  // put site title in header for a clean top bar like stephango
+  header: [Component.PageTitle()],
   afterBody: [],
   footer: Component.Footer({
+    // you can remove or customise these links as desired for minimal look
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
       "Discord Community": "https://discord.gg/cRFFHYye7t",
@@ -35,16 +37,12 @@ export const defaultContentPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
+        // reader mode can be omitted if you want extra minimalism
       ],
     }),
     Component.Explorer(),
   ],
-  right: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
-  ],
+  right: [], // drop graph/toc/backlinks for a cleaner single-column look
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
