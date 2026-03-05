@@ -2,10 +2,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import { classNames } from "../util/lang"
 import { simplifySlug } from "../util/path"
 
-const hiddenSlugs = new Set(["/", "index", "tags", "sobre", "agora", "projects", "subscribe"])
-
-const shouldHideSlug = (slug: string) =>
-  hiddenSlugs.has(slug) || slug.startsWith("tags/")
+const shouldHideSlug = (slug: string) => slug === "subscribe" || slug.startsWith("tags/")
 
 const SubscribeEmbed: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
   if (!fileData.filePath) {
@@ -48,9 +45,9 @@ const SubscribeEmbed: QuartzComponent = ({ fileData, displayClass }: QuartzCompo
 
 SubscribeEmbed.css = `
 .subscribe-embed {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--lightgray);
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
 }
 
 .subscribe-embed.subscribe-page {
@@ -60,16 +57,17 @@ SubscribeEmbed.css = `
 }
 
 .subscribe-embed .subscribe-kicker {
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.95rem 0;
   color: var(--gray);
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 1.2;
 }
 
 .subscribe-embed .subscribe-copy {
-  margin: 0 0 1.8rem 0;
+  margin: 0 0 1.6rem 0;
   color: var(--darkgray);
   line-height: 1.45;
+  font-size: 1.05rem;
 }
 
 .subscribe-embed .subscribe-form {
@@ -97,8 +95,8 @@ SubscribeEmbed.css = `
   border: none;
   border-bottom: 1px solid var(--lightgray);
   border-radius: 0;
-  padding: 0.55rem 0;
-  font-size: 1.05rem;
+  padding: 0.65rem 0;
+  font-size: 1.7rem;
   outline: none;
 }
 
@@ -117,7 +115,7 @@ SubscribeEmbed.css = `
   color: var(--light);
   font-size: 1.05rem;
   line-height: 1;
-  padding: 0.8rem 1.25rem;
+  padding: 0.85rem 1.25rem;
   cursor: pointer;
 }
 
@@ -127,7 +125,7 @@ SubscribeEmbed.css = `
 
 @media all and (max-width: 800px) {
   .subscribe-embed .subscribe-kicker {
-    font-size: 1.55rem;
+    font-size: 1.6rem;
   }
 
   .subscribe-embed .subscribe-form {
@@ -138,6 +136,10 @@ SubscribeEmbed.css = `
 
   .subscribe-embed button {
     width: fit-content;
+  }
+
+  .subscribe-embed input[type="email"] {
+    font-size: 1.2rem;
   }
 }
 `
