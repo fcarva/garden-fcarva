@@ -13,12 +13,11 @@ export const sharedPageComponents: SharedLayout = {
     }),
   ],
   afterBody: [Component.YouMightEnjoy(), Component.SubscribeEmbed()],
-  footer: Component.Footer({
-    links: {
-      RSS: "/index.xml",
-      Subscribe: "/subscribe",
-      GitHub: "https://github.com/fcarva",
-    },
+  footer: Component.ConditionalRender({
+    component: Component.Footer({
+      links: {},
+    }),
+    condition: () => false,
   }),
 }
 

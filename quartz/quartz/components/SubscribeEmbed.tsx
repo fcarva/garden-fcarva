@@ -16,7 +16,9 @@ const SubscribeEmbed: QuartzComponent = ({ fileData, displayClass }: QuartzCompo
 
   return (
     <section class={classNames(displayClass, "subscribe-embed")}>
-      <p class="subscribe-kicker">Receive my updates</p>
+      <p class="subscribe-kicker">
+        <a href="/subscribe">Receive my updates</a>
+      </p>
       <p class="subscribe-copy">
         Follow me via email, <a href="/index.xml">RSS</a>, <a href="https://x.com/fcarva">Twitter</a>,
         and <a href="/sobre">other options</a>
@@ -58,9 +60,17 @@ SubscribeEmbed.css = `
 
 .subscribe-embed .subscribe-kicker {
   margin: 0 0 0.95rem 0;
-  color: var(--gray);
   font-size: 1rem;
   line-height: 1.4;
+}
+
+.subscribe-embed .subscribe-kicker a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.subscribe-embed .subscribe-kicker a:hover {
+  color: var(--darkgray);
 }
 
 .subscribe-embed .subscribe-copy {
