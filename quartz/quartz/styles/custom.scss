@@ -145,10 +145,12 @@ body[data-slug="index"] article > *:first-child {
 }
 
 body[data-slug="index"] article h2 {
-  margin-top: 2.4rem;
-  font-size: 0.92rem;
-  color: var(--gray);
+  margin-top: 1.35rem;
+  font-size: calc(1.2rem + 0.2vw);
+  line-height: 1.3;
+  color: var(--darkgray);
   font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 body[data-slug="index"] article ul {
