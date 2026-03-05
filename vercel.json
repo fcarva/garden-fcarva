@@ -1,5 +1,15 @@
 {
   "buildCommand": "cd quartz && npm install && node quartz/bootstrap-cli.mjs build",
   "outputDirectory": "quartz/public",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/topics",
+      "destination": "/tags"
+    },
+    {
+      "source": "/topics/:path*",
+      "destination": "/tags/:path*"
+    }
+  ]
 }

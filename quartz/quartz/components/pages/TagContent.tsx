@@ -52,7 +52,7 @@ export default ((opts?: Partial<TagContentOptions>) => {
           <article class={classes}>{content}</article>
           <p class="topics-inline">
             {tags.map((tag, index) => {
-              const href = resolveRelative(fileData.slug!, `/tags/${tag}` as FullSlug)
+              const href = resolveRelative(fileData.slug!, `/topics/${tag}` as FullSlug)
               return (
                 <>
                   <a class="internal topic-link" href={href}>

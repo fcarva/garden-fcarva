@@ -62,10 +62,10 @@ export default ((userOpts?: Partial<Options>) => {
                     <ul class="tags">
                       {tags.map((tag) => (
                         <li>
-                          <a
-                            class="internal tag-link"
-                            href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
-                          >
+                            <a
+                              class="internal tag-link"
+                              href={resolveRelative(fileData.slug!, `topics/${tag}` as FullSlug)}
+                            >
                             {tag}
                           </a>
                         </li>

@@ -1,12 +1,19 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
+import { i18n } from "../i18n"
 
-const ArticleTitle: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
+const ArticleTitle: QuartzComponent = ({ fileData, displayClass, cfg }: QuartzComponentProps) => {
   const rawTitle = fileData.frontmatter?.title
-  const title =
-    fileData.slug?.startsWith("tags/") && rawTitle?.startsWith("Tag: ")
-      ? rawTitle.slice(5)
-      : rawTitle
+  const tagPrefix = `${i18n(cfg.locale).pages.tagContent.tag}: `
+  const folderPrefix = `${i18n(cfg.locale).pages.folderContent.folder}: `
+
+  let title = rawTitle
+  if (fileData.slug?.startsWith("tags/") && rawTitle?.startsWith(tagPrefix)) {
+    title = rawTitle.slice(tagPrefix.length)
+  } else if (fileData.slug?.endsWith("/index") && rawTitle?.startsWith(folderPrefix)) {
+    title = rawTitle.slice(folderPrefix.length)
+  }
+
   if (title) {
     return <h1 class={classNames(displayClass, "article-title")}>{title}</h1>
   } else {

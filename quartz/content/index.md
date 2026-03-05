@@ -13,13 +13,13 @@ socialImage: og-image.jpg
 
 <hr class="home-divider" />
 
-<p class="home-muted"><a href="/tags" class="internal-link">Topics</a></p>
+<p class="home-muted"><a href="/topics" class="internal-link">Topics</a></p>
 
 <p>
-  <a href="/tags/escrita" class="internal-link">escrita</a>,
-  <a href="/tags/design" class="internal-link">design</a>,
-  <a href="/tags/produto" class="internal-link">produto</a>,
-  <a href="/tags/sistemas" class="internal-link">sistemas</a>
+  <a href="/topics/escrita" class="internal-link">escrita</a>,
+  <a href="/topics/design" class="internal-link">design</a>,
+  <a href="/topics/produto" class="internal-link">produto</a>,
+  <a href="/topics/sistemas" class="internal-link">sistemas</a>
 </p>
 
 <hr class="home-divider" />
