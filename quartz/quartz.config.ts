@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { stephangoInspiredOg } from "./quartz/util/customOg"
 
 /**
  * Quartz 4 Configuration
@@ -90,8 +91,10 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      Plugin.CustomOgImages({
+        colorScheme: "darkMode",
+        imageStructure: stephangoInspiredOg,
+      }),
     ],
   },
 }
