@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bem-vindo.md",
+                "file": "quartz/content/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bem-vindo"
+              "title": "index"
             }
           }
         ]
@@ -199,19 +199,36 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "63d88569689e5473",
+  "active": "3c037f7311326073",
   "lastOpenFiles": [
-    "quartz/vercel.json",
-    "vercel.json",
-    "quartz/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/fraktur-bold.js",
-    "quartz/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/tex-oldstyle.js",
-    "quartz/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/svg/fonts/tex/italic.js",
-    "quartz/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/svg/fonts/tex/tex-variant.js",
-    "quartz/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/svg/fonts/tex/tex-size4.js",
-    "quartz/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/svg/fonts/tex/tex-size3.js",
-    "quartz/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/svg/fonts/tex/tex-oldstyle.js",
-    "quartz/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/svg/fonts/tex/tex-oldstyle-bold.js",
-    "quartz/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/svg/fonts/tex/tex-mathit.js",
+    "quartz/content/projects.md",
+    "quartz/content/sobre.md",
+    "quartz/content/agora.md",
+    "quartz/content/index.md",
+    "quartz/content/escrita/constrangimentos-geram-claridade.md",
+    "Bem-vindo.md",
+    "quartz/quartz/util/customOg.tsx",
+    "quartz/public/static/og-image.jpg",
+    "quartz/public/static/fcarva.jpg",
+    "quartz/quartz/static/og-image.jpg",
+    "quartz/quartz/static/unnamed.jpg",
+    "quartz/quartz/static/fcarva.jpg",
+    "quartz/public/projects.html",
+    "quartz/public/projects-og-image.webp",
+    "quartz/quartz/components/styles/youMightEnjoy.scss",
+    "quartz/quartz/components/YouMightEnjoy.tsx",
+    "quartz/public/agora-og-image.webp",
+    "quartz/public/agora.html",
+    "quartz/public/sobre-og-image.webp",
+    "quartz/public/tags/sistemas.html",
+    "quartz/public/tags/produto.html",
+    "quartz/public/tags/escrita.html",
+    "quartz/public/tags/design.html",
+    "quartz/public/escrita/primeiro-ensaio.html",
+    "quartz/public/escrita/primeiro-ensaio-og-image.webp",
+    "quartz/public/escrita/constrangimentos-geram-claridade-og-image.webp",
+    "quartz/content/escrita/notas-que-escalam.md",
+    "quartz/content/escrita/primeiro-ensaio.md",
     "quartz/node_modules/vfile/node_modules/@types/unist/README.md",
     "quartz/node_modules/unist-util-is/node_modules/@types/unist/README.md",
     "quartz/node_modules/vfile-location/node_modules/@types/unist/README.md",
@@ -229,23 +246,6 @@
     "quartz/node_modules/mdast-util-from-markdown/node_modules/@types/unist/README.md",
     "quartz/node_modules/hast-util-to-text/node_modules/@types/unist/README.md",
     "quartz/node_modules/hast-util-from-parse5/node_modules/@types/unist/README.md",
-    "quartz/node_modules/hast-util-to-html/node_modules/@types/unist/README.md",
-    "quartz/node_modules/hast-util-to-jsx-runtime/node_modules/@types/unist/README.md",
-    "quartz/node_modules/hast-util-raw/node_modules/@types/unist/README.md",
-    "quartz/node_modules/hast-util-from-html/node_modules/@types/unist/README.md",
-    "quartz/node_modules/@parcel/watcher/node_modules/picomatch/README.md",
-    "quartz/node_modules/vfile/node_modules/vfile-message/readme.md",
-    "quartz/node_modules/vfile/node_modules/unist-util-stringify-position/readme.md",
-    "quartz/node_modules/speech-rule-engine/node_modules/commander/Readme.md",
-    "quartz/node_modules/js-binary-schema-parser/example/dog.gif",
-    "quartz/node_modules/js-binary-schema-parser/example/horses.gif",
-    "quartz/node_modules/js-binary-schema-parser/example/box.gif",
-    "quartz/node_modules/gifuct-js/demo/jblack.gif",
-    "quartz/node_modules/gifuct-js/demo/horses.gif",
-    "quartz/node_modules/gifuct-js/demo/dog.gif",
-    "quartz/node_modules/cli-spinner/img/spinner.gif",
-    "quartz/docs/images/custom-social-image-preview-dark.png",
-    "quartz/docs/images/social-image-preview-light.png",
-    "quartz/docs/images/social-image-preview-dark.png"
+    "quartz/node_modules/hast-util-to-html/node_modules/@types/unist/README.md"
   ]
 }
