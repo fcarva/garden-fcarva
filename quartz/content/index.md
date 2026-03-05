@@ -3,9 +3,9 @@ title: Home
 socialImage: og-image.jpg
 ---
 
-<p class="home-muted"><a href="/escrita/primeiro-ensaio" class="internal-link">Latest</a></p>
+<p class="home-muted"><a href="/escrita/primeiro-ensaio" class="internal-link">Recentes</a></p>
 
-## [Primeiro ensaio no garden](/escrita/primeiro-ensaio)
+## [Primeiro ensaio no garden](escrita/stakeholder.md)
 
 <p class="home-muted small">01/03/2026 - 2 min read</p>
 

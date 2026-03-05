@@ -1,0 +1,8 @@
+filters:
+  and:
+    - file.folder == "Biblioteca"
+views:
+  - type: cards
+    name: Tabela
+    image: note.coverUrl
+    imageAspectRatio: 1.5

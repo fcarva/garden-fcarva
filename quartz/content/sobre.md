@@ -2,24 +2,24 @@
 title: Sobre
 socialImage: og-image.jpg
 ---
-
 ## Sobre mim
 
-Sou o fcarva. Escrevo sobre design de produto, sistemas de conhecimento e escrita aplicada.
+Eu sou Felipe Carvalho, mas pode me chamar de fcarva. Atualmente Msc. Economics/UFES. Escrevo sobre economia, arte, livros, plástico e vários temas que me deixam curioso.
 
-Hoje uso este garden como base publica para aprender em voz alta e conectar ideias de longo prazo.
+Esse espaço é um *jardim* de conhecimento na qual eu cultivo ideias de longo prazo.
 
 ### Explore
 
-- [Writing](/escrita)
+- [Textos](/escrita)
+- [Tópicos](/tags)
 - [Biblioteca](/biblioteca)
-- [Projects](/projects)
+- [Projetos](/projects)
 - [Agora](/agora)
-- [Topics](/tags)
+
 
 ## Em outros lugares
 
-Voce pode acompanhar atualizacoes por:
+Você pode acompanhar atualizações por:
 
 - [RSS](/index.xml)
 - [GitHub](https://github.com/fcarva)
