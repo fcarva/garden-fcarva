@@ -10,6 +10,8 @@ tags:
 ---
 — *UM ESTUDO SOBRE O DESENCATAMENTO DO MUNDO, AS SEITAS PROTESTANTES E SUA AFINIDADE ELETIVA COM O ETHOS CAPITALISTA E O PAPEL DA ARTICULAÇÃO ENTRE FILIAÇÃO RELIGIOSA E ESTRATIFICAÇÃO SOCIAL*
 
+![[escrita/imagens/unnamed.jpg]]
+
 ## Resumo
 
 Em busca de entender mais afundo a Sociologia da Religião de Max Weber e o que está de implícito em um dos seus textos “A Ética Protestante e o ‘’Espírito’’ do Capitalismo, o entendimento dessa questão passa além de olhar o processo ‘’religioso’’ como mero reflexo da situação de interesse material e ideal. Ou se não nos atentarmos, cair no reducionismo de fazer uma relação causal entre reforma protestante e a formação do capitalismo moderno. O que se pretende neste artigo é entender o processo de racionalização das sociedades ocidentais moderna a luz das transformações do processo religioso: o desencantamento do mundo, o papel das ‘’seitas’’ protestantes e sua ‘’afinidade eletiva’’ com o *ethos* capitalista e o papel que a articulação entre filiação religiosa e estratificação social tem em legitimar certa conduta de vi
