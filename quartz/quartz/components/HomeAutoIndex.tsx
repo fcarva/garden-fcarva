@@ -4,6 +4,7 @@ import { byDateAndAlphabetical } from "./PageList"
 import { formatDate, getDate } from "./Date"
 import { FullSlug, joinSegments, resolveRelative } from "../util/path"
 import { classNames } from "../util/lang"
+import { CURATED_TOPICS, isStructuralTag, topicLabel } from "../util/topicTaxonomy"
 
 const isWritingNote = (file: QuartzComponentProps["allFiles"][number]) => {
   const slug = file.slug ?? ""
@@ -16,15 +17,6 @@ const isWritingNote = (file: QuartzComponentProps["allFiles"][number]) => {
 }
 
 const oneLine = (value?: string) => value?.replace(/\s+/g, " ").trim()
-const topicLabel = (tag: string) => {
-  const labels: Record<string, string> = {
-    "bens-publicos": "bens públicos",
-    "democracia-participatoria": "democracia participatória",
-    "financiamento-quadratico": "financiamento quadrático",
-  }
-
-  return labels[tag] ?? tag.replace(/-/g, " ")
-}
 
 const HomeAutoIndex: QuartzComponent = ({ allFiles, fileData, cfg, displayClass }: QuartzComponentProps) => {
   if (fileData.slug !== "index") {
@@ -49,9 +41,17 @@ const HomeAutoIndex: QuartzComponent = ({ allFiles, fileData, cfg, displayClass 
     latest.frontmatter?.description ?? latest.description ?? "Novo texto publicado no garden.",
   )
 
-  const topicTags = [
-    ...new Set(writingNotes.flatMap((page) => page.frontmatter?.tags ?? []).filter((tag) => tag.length > 0)),
+  const discoveredTopicTags = [
+    ...new Set(
+      writingNotes
+        .flatMap((page) => page.frontmatter?.tags ?? [])
+        .filter((tag) => tag.length > 0 && !isStructuralTag(tag)),
+    ),
   ].sort((a, b) => a.localeCompare(b, "pt-BR"))
+
+  const curatedTopicTags = CURATED_TOPICS.filter((tag) => discoveredTopicTags.includes(tag))
+  const autoTopicTags = discoveredTopicTags.filter((tag) => !curatedTopicTags.includes(tag))
+  const topicTags = [...curatedTopicTags, ...autoTopicTags]
 
   return (
     <section class={classNames(displayClass, "home-auto-index")}>

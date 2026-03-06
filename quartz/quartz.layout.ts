@@ -55,7 +55,15 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.ArticleTitle()],
+  beforeBody: [
+    Component.ConditionalRender({
+      component: Component.ArticleTitle(),
+      condition: (page) => {
+        const slug = page.fileData.slug ?? ""
+        return slug === "topics" || !slug.startsWith("topics/")
+      },
+    }),
+  ],
   left: [],
   right: [],
 }

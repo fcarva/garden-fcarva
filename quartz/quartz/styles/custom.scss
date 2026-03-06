@@ -260,19 +260,49 @@ body[data-slug="index"] .home-auto-index .home-section-link:hover {
 }
 
 .topics-inline {
+  margin-top: 0.7rem;
   color: var(--gray);
-  line-height: 1.7;
+  line-height: 1.85;
+  font-size: 1.03rem;
 }
 
 .topics-inline .topic-link {
   color: var(--darkgray);
   text-decoration: underline;
-  text-decoration-thickness: 0.05em;
-  text-underline-offset: 0.13em;
+  text-decoration-thickness: 0.04em;
+  text-underline-offset: 0.12em;
 }
 
 .topics-inline .topic-link:hover {
   color: var(--secondary);
+}
+
+.topic-detail-header {
+  margin: 0.2rem 0 1.4rem;
+}
+
+.topic-detail-title {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.8rem, calc(1.45rem + 1.1vw), 2.55rem);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+.topic-detail-prefix,
+.topic-detail-separator {
+  color: var(--gray);
+}
+
+.topic-detail-subtitle {
+  margin: 0;
+  color: var(--gray);
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+body[data-slug^="topics/"] .page-listing .section-ul {
+  margin-top: 0;
 }
 
 @media all and (max-width: 800px) {

@@ -1,12 +1,12 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 import style from "../styles/listPage.scss"
-import { PageList, SortFn } from "../PageList"
+import { byDateAndAlphabetical, PageList, SortFn } from "../PageList"
 import { FullSlug, getAllSegmentPrefixes, joinSegments, resolveRelative, simplifySlug } from "../../util/path"
-import { QuartzPluginData } from "../../plugins/vfile"
 import { Root } from "hast"
 import { htmlToJsx } from "../../util/jsx"
 import { ComponentChildren } from "preact"
 import { concatenateResources } from "../../util/resources"
+import { topicHeadingLabel, topicLabel } from "../../util/topicTaxonomy"
 
 interface TagContentOptions {
   sort?: SortFn
@@ -17,18 +17,9 @@ const defaultOptions: TagContentOptions = {
   numPages: 10,
 }
 
-const topicLabel = (tag: string) => {
-  const labels: Record<string, string> = {
-    "bens-publicos": "bens públicos",
-    "democracia-participatoria": "democracia participatória",
-    "financiamento-quadratico": "financiamento quadrático",
-  }
-
-  return labels[tag] ?? tag.replace(/-/g, " ")
-}
-
 export default ((opts?: Partial<TagContentOptions>) => {
   const options: TagContentOptions = { ...defaultOptions, ...opts }
+  const formatTopicDate = (date: Date) => `${date.getFullYear()} \u00b7 ${String(date.getMonth() + 1).padStart(2, "0")}`
 
   const TagContent: QuartzComponent = (props: QuartzComponentProps) => {
     const { tree, fileData, allFiles } = props
@@ -56,15 +47,16 @@ export default ((opts?: Partial<TagContentOptions>) => {
     ) as ComponentChildren
     const cssClasses: string[] = fileData.frontmatter?.cssclasses ?? []
     const classes = cssClasses.join(" ")
+    const showDefaultContent = !isTopicPage
     if (tag === "/") {
       const tags = [
         ...new Set(
           allFiles.flatMap((data) => data.frontmatter?.tags ?? []).flatMap(getAllSegmentPrefixes),
         ),
-      ].sort((a, b) => a.localeCompare(b))
+      ].sort((a, b) => a.localeCompare(b, "pt-BR"))
       return (
         <div class="popover-hint">
-          <article class={classes}>{content}</article>
+          {showDefaultContent ? <article class={classes}>{content}</article> : null}
           <p class="topics-inline">
             {tags.map((tag, index) => {
               const href = resolveRelative(fileData.slug!, joinSegments("topics", tag) as FullSlug)
@@ -86,13 +78,33 @@ export default ((opts?: Partial<TagContentOptions>) => {
         ...props,
         allFiles: pages,
       }
+      const topicTitle = topicHeadingLabel(tag)
+      const topicCountLabel =
+        pages.length === 1 ? "1 texto sobre este tópico" : `${pages.length} textos sobre este tópico`
+      const showTopicDetailHeader = isTopicPage
+      const topicSort = options?.sort ?? byDateAndAlphabetical(props.cfg)
 
       return (
         <div class="popover-hint">
-          <article class={classes}>{content}</article>
+          {showDefaultContent ? <article class={classes}>{content}</article> : null}
+          {showTopicDetailHeader ? (
+            <header class="topic-detail-header">
+              <h1 class="topic-detail-title">
+                <span class="topic-detail-prefix">Tópicos</span>
+                <span class="topic-detail-separator"> / </span>
+                <span>{topicTitle}</span>
+              </h1>
+              <p class="topic-detail-subtitle">{topicCountLabel}</p>
+            </header>
+          ) : null}
           <div class="page-listing">
             <div>
-              <PageList limit={options.numPages} {...listProps} sort={options?.sort} />
+              <PageList
+                limit={options.numPages}
+                {...listProps}
+                sort={showTopicDetailHeader ? topicSort : options?.sort}
+                dateFormatter={showTopicDetailHeader ? formatTopicDate : undefined}
+              />
             </div>
           </div>
         </div>

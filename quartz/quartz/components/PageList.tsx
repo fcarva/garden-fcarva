@@ -55,9 +55,10 @@ export function byDateAndAlphabeticalFolderFirst(cfg: GlobalConfiguration): Sort
 type Props = {
   limit?: number
   sort?: SortFn
+  dateFormatter?: (date: Date) => string
 } & QuartzComponentProps
 
-export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort }: Props) => {
+export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort, dateFormatter }: Props) => {
   const sorter = sort ?? byDateAndAlphabeticalFolderFirst(cfg)
   let list = [...allFiles].sort(sorter)
   if (limit) {
@@ -69,11 +70,16 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
       {list.map((page) => {
         const title = page.frontmatter?.title
         const date = page.dates ? getDate(cfg, page) : undefined
+        const formattedDate = date
+          ? dateFormatter
+            ? dateFormatter(date)
+            : formatDate(date, cfg.locale)
+          : undefined
 
         return (
           <li class="section-li">
             <a href={resolveRelative(fileData.slug!, page.slug!)} class="section internal">
-              {date ? <span class="meta">{formatDate(date, cfg.locale)}</span> : null}
+              {formattedDate ? <span class="meta">{formattedDate}</span> : null}
               <span class="desc">{title}</span>
             </a>
           </li>
