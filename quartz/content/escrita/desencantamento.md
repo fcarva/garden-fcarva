@@ -141,7 +141,3 @@ LOWY, M. A jaula de aço: Max Weber e o marxismo weberiano, Boitempo Editorial, 
 WEBER, M. A ética protestante e o “espírito” do capitalismo. São Paulo: Companhia das Letras, 2004.
 
 \_\_\_\_\_\_. Ensaios de Sociologia. Rio de Janeiro: Zahar, 1989.
-
----
-
-[# hive-112018](https://peakd.com/trending/hive-112018)
