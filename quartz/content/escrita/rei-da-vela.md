@@ -101,7 +101,7 @@ Em um diálogo entre Abelardos acontece uma descrição do secretário
 >
 > Abelardo II: Mas eu sempre defendi a tradição e a moral!
 
-![Pasted image 20230921231245.png](https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23tbiXNRqPHbw8h8PvQTZnAqK6DqM5BNbs5breDdY44TEjyR4rEj7kX5rXf6J4Qesg9fH.png)
+![Pasted image 20230921231245.png](escrita/imagens/rei-da-vela-20230921231245.png)
 
 ## Por que o Brasil não paga a dívida com o Café que está queimando?
 
