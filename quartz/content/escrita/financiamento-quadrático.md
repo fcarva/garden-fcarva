@@ -1,7 +1,7 @@
 ---
-title: Um guia para o financiamento quadrático #1
+title: Um guia para o financiamento quadrático
 description: O financiamento quadrático é um mecanismo para financiar bens públicos com coordenação democrática.
-socialImage: og-image.jpg
+socialImage: https://storage.googleapis.com/papyrus_images/b4ba497081baceee1942951c1f638dec86d0718acdd5436a68e01aa7fd963d92.jpg
 date: 2026-03-05
 tags:
   - escrita

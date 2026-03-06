@@ -1,8 +1,7 @@
 ---
 title: Finanças regenerativas
-source: https://paragraph.com/editor/at6oaFYDBn2ogZWTptrR
 description: Introdução às finanças regenerativas e ao financiamento de bens públicos em contexto climático.
-socialImage: og-image.jpg
+socialImage: https://storage.googleapis.com/papyrus_images/cafc9879687cc9dc4202170757a50c9799d359ae05c8b0f35e47cd6c7799c6d9.jpg
 date: 2026-03-05
 tags:
   - escrita

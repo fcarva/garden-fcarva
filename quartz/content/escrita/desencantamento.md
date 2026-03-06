@@ -1,7 +1,7 @@
 ---
 title: Desencantamento do mundo
 description: Notas sobre Max Weber, desencantamento do mundo e afinidade eletiva entre protestantismo e ethos capitalista.
-socialImage: og-image.jpg
+socialImage: escrita/imagens/smoke.jpg
 date: 2026-03-05
 tags:
   - escrita

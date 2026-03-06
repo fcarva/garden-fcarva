@@ -1,7 +1,7 @@
 ---
 title: O que os economistas sabem?
 description: Ensaio sobre os limites epistemológicos da economia e o papel do método na prática dos economistas.
-socialImage: og-image.jpg
+socialImage: https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23y8sojCbC2haqwD1r67xo5ME7pbhXsCCSMqVwmQxm1xfQfpyMnXpb8qEfRJXdwV4gWNR.PNG
 date: 2026-03-05
 tags:
   - escrita

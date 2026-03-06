@@ -5,9 +5,8 @@ socialImage: og-image.jpg
 ---
 ## Sobre mim
 
-Eu sou Felipe Carvalho, mas pode me chamar de fcarva. Atualmente Msc. Economics/UFES. Escrevo sobre economia, arte, livros, plástico e vários temas que me deixam curioso.
+Sou Felipe. Você também pode me conhecer como *fcarva*, mestrando em Economia pela UFES. Trabalho com a [Precious Plastic Espírito Santo](https://www.instagram.com/preciousplastic.es/), [Gnars DAO](https://gnars.com/), [Zine Protocol](https://x.com/zineprotocol) e [Dádiva](https://dadiva.gitbook.io/). Anteriormente, [Precious Noggles](https://www.preciousplastic.com/noggles).
 
-Esse espaço é um *jardim* de conhecimento na qual eu cultivo ideias de longo prazo.
 
 ### Explore
 
@@ -17,14 +16,19 @@ Esse espaço é um *jardim* de conhecimento na qual eu cultivo ideias de longo p
 - [Projetos](/projects)
 - [Agora](/agora)
 
+
 ## Em outros lugares
 
 Você pode acompanhar atualizações por:
 
 - [RSS](/index.xml)
 - [GitHub](https://github.com/fcarva)
+- X: [@fcarva.eth](https://x.com/fcarvaeth)
+- GitHub: [@fcarva](https://github.com/fcarva)
+- Instagram: [@fcarva](https://www.instagram.com/fcarva)
 
 ## Mural
 
 ![[unnamed.jpg]]
 *Favela (1965) — Heitor dos Prazeres. óleo sobre tela.*
+

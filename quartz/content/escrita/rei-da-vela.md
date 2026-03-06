@@ -2,7 +2,7 @@
 title: Rei da Vela
 source: https://peakd.com/hive-166847/@fcarva/enpt-the-king-of-candle
 description: Leitura crítica de O Rei da Vela e da montagem do Teatro Oficina no contexto social e político brasileiro.
-socialImage: og-image.jpg
+socialImage: https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23swnJUWNSsvKt4sQB7YkVhPoH2JgLdzQtBmo4ttLNPhM8EtBZCQHSrEYUAG2ajazZtbc.png
 date: 2026-03-05
 tags:
   - escrita

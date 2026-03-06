@@ -1,8 +1,8 @@
 ---
-title: Um guia para financiar limpezas de praias #1
+title: Um guia para financiar limpezas de praias
 source: https://peakd.com/hive-141964/@fcarva/en-pt-a-guide-to
 description: Guia introdutório para financiar limpezas de praia com mecanismos onchain de impacto e coordenação comunitária.
-socialImage: og-image.jpg
+socialImage: https://images.ecency.com/DQmapdGKfg5QpzRSAfznGLVaVBDWsDWA6THJRN2DzYRMksq/97fc36b53598888c21d931161bc5d1ca.jpg
 date: 2026-03-05
 tags:
   - escrita

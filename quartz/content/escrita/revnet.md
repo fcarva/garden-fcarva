@@ -1,7 +1,7 @@
 ---
 title: Revnets
 description: Introdução e formalização de revnets, com foco em emissão, resgate, empréstimos e dinâmica de preços.
-socialImage: og-image.jpg
+socialImage: escrita/imagens/GrYw3ZkXcAETM2N.png
 date: 2026-03-05
 tags:
   - escrita
@@ -10,6 +10,7 @@ tags:
   - bens-publicos
   - democracia-participatoria
 ---
+![[GrYw3ZkXcAETM2N.png]]
 Revnets são estruturas financeiras tokenizadas e autônomas que roteiam fluxos de receita e resgates através de regras imutáveis de contratos inteligentes. Elas são implantadas usando o protocolo Juicebox V5 e governadas inteiramente por código, em vez de votações no estilo DAO.
 
 ***Uma revnet é uma máquina de vendas digital para receitas: dinheiro entra, tokens saem; tokens podem ser posteriormente resgatados por uma parcela programática do tesouro.***
