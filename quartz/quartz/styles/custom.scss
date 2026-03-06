@@ -29,6 +29,20 @@
   margin: 0 auto;
 }
 
+body[data-slug="escrita/revnet"] .page > #quartz-body .center,
+body[data-slug="escrita/revnet"] .page > #quartz-body footer {
+  width: min(94vw, 40rem);
+}
+
+.page > #quartz-body .center:has(.katex-display),
+.page > #quartz-body footer:has(.katex-display) {
+  width: min(95vw, 42rem);
+}
+
+article .katex-display {
+  padding-inline: 0.25rem;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: clamp(1rem, calc(0.92rem + 0.16vw), 1.12rem);
