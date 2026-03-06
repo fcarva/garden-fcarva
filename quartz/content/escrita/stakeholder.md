@@ -10,7 +10,7 @@ tags:
   - bens-publicos
   - democracia
 ---
-### Introduction
+## Introduction
 
 All right, well thank you so much Sam and Wendy for inviting me to participate in this panel with Philippe. You three are some of my intellectual heroes, so it's a real honor to be in conversation with you.
 

@@ -59,9 +59,9 @@ rocha de plástico composta por corda de pesca.
 Imagens retiradas da noticia, veja ela completa [*aqui*](https://g1.globo.com/es/espirito-santo/noticia/2023/02/09/ilha-com-rochas-de-plastico-veja-fotos-do-local-isolado-onde-a-poluicao-marinha-afetou-a-formacao-geologica.ghtml)*.*
 
 > 🌎 Somos agentes geológicos, modificamos o clima, a natureza das rochas.
-> 
+>
 > Pensamos na natureza com algo imutável e os fenômenos da Terra como maior que nós.
-> 
+>
 > A mudança de era já ocorreu, *bem-vindo ao antropoceno.*
 
 O conceito de “Antropoceno” refere-se à época geológica iniciada a partir dos impactos humanos.

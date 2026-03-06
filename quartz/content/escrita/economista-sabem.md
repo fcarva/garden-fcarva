@@ -9,6 +9,7 @@ tags:
   - metodologia
 ---
 ## “Ciência Econômica: O Que É?”
+
 ![carybe_mercado.PNG](https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23y8sojCbC2haqwD1r67xo5ME7pbhXsCCSMqVwmQxm1xfQfpyMnXpb8qEfRJXdwV4gWNR.PNG)
 
 > "A tradição de todas as gerações mortas oprime como um pesadelo o cérebro dos vivos." - Karl Marx

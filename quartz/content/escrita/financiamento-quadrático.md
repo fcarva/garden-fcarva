@@ -26,7 +26,7 @@ A tomada da decisão sobre para onde vai o dinheiro não é de quem contribuiu c
 Você pode encontrar uma explicação mais aprofundada do conceito de financiamento quadrático [aqui](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3243656).
 
 > O conceito foi amplamente discutido por:
-> 
+>
 > Zoë Hitzig, economista E. Glen Weyl, economista Vitalik Buterin, fundador do Ethereum
 
 A ideia do guia não é se prender a fórmula, mas na intuição econômica por trás do mecanismo.
@@ -90,7 +90,7 @@ Então, o que vemos é que o financiamento quadrático incentiva não apenas a q
 - aumenta o valor disponível para o projeto
 
 > **A ideia principal:** É uma maneira ótima, tanto economicamente quanto democraticamente, de financiar bens públicos
-> 
+>
 > **É interessante** **porque:** O objetivo é não somente habilitar as pessoas a expressar suas preferências, mas também a intensidade de suas preferências.
 
 ### 🕵🏽♂️ O que estamos tentando descobrir?
@@ -226,9 +226,9 @@ Diante a experiência de protocolos como [Gitcoin](https://www.gitcoin.co/) e [c
 Os mecanismos de financiamento como matching funding, doações, filantropia, editais, que considero como mecanismos tradicionais. Os Patrocinadores doam o dinheiro, as pessoas inscrevem projetos, pessoas podem doar para esses projetos, quanto mais fundos angariados para um determinado projeto, maior é a contrapartida doada por esse patrocinador.
 
 > Nesse caso, como você sinaliza as preferências de um grupo?
-> 
+>
 > E como você garante que esse sinal de preferência seja ótimo, ou seja significativo, para ele e para a comunidade?
-> 
+>
 > Como usar essa informação não apenas para distribuir fundos, mas para as pessoas tomarem decisões?
 
 O financiamento quadrático distribui esses fundos democraticamente, ao considerar o fundo de contrapartida de um lado, um determinado período de tempo para o projeto rodar, e quando concluída a rodada, do outro lado temos uma quantidade de doações, um mapa das preferências de uma determinada comunidade.

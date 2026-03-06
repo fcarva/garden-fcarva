@@ -1,0 +1,20 @@
+# Markdownlint config for Quartz content notes.
+# We keep structural rules and relax rules that conflict with Obsidian/Quartz authoring style.
+globs:
+  - "**/*.md"
+ignores:
+  - "quartz/public/**"
+  - "**/node_modules/**"
+  - ".git/**"
+  # Vendored Quartz upstream docs/templates (kept untouched to avoid fork drift).
+  - "quartz/.github/**"
+  - "quartz/docs/**"
+  - "quartz/CODE_OF_CONDUCT.md"
+  - "quartz/README.md"
+config:
+  default: true
+  MD013: false # line length (long-form essays and pasted citations)
+  MD033: false # inline HTML used in subscribe embeds/forms
+  MD045: false # Obsidian image embeds don't carry alt text
+  MD025: false # some long essays intentionally use multiple H1-level sections
+  MD036: false # intentional emphasized lead-ins inside essays

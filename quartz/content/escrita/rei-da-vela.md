@@ -9,7 +9,7 @@ tags:
   - cultura
   - teatro
 ---
-## Rei Abelardo I agoniza; seu Secretário, Abelardo II, anseia subir ao poder; o povo enjaulado delira de fome.
+## Rei Abelardo I agoniza; seu Secretário, Abelardo II, anseia subir ao poder; o povo enjaulado delira de fome
 
 Filmagem da montagem histórica da peça de Oswald de Andrade, ricos decadentes, filhos que rompem a tradição, o banqueiro no trópico colonial são os personagens interpretados pelo Grupo Oficina, em uma célebre apresentação teatral realizada no ano de 1967, gravada fundamentalmente em 71 e lançada apenas em 82.
 
@@ -92,13 +92,13 @@ Nos anos 1960, em plena Ditadura Militar e às vésperas do AI-5, o Teatro Ofici
 Em um diálogo entre Abelardos acontece uma descrição do secretário
 
 > Homem recalcado do Brasil, produto do clima, da economia escrava, e da moral desumana, que faz milhões e milhões de unionistas desesperados para manter o imperialismo e a família reacionária.
-> 
+>
 > Conheço-te, fera solta. Capaz dos piores propósitos.
-> 
+>
 > Febrônio dissimulado das ruas do Brasil
-> 
+>
 > Amanhã quando entrares das posses da sua fortuna, dependerás também a sagrada instituição da família, a virgindade, o pudor. Para o dinheiro permaneça através dos filhos legítimos numa classe só
-> 
+>
 > Abelardo II: Mas eu sempre defendi a tradição e a moral!
 
 ![Pasted image 20230921231245.png](https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23tbiXNRqPHbw8h8PvQTZnAqK6DqM5BNbs5breDdY44TEjyR4rEj7kX5rXf6J4Qesg9fH.png)
@@ -122,33 +122,33 @@ Nós precisamos nos armar contra a guerra. contra qualquer pessoa guerra. Intern
 > Era um simples cachorro  
 > Um cachorro de rua  
 > Mas um cachorro idealista
-> 
+>
 > Os soldados de um cartel  
 > Adotaram Jujuba  
 > Jujuba ficou sendo o mascote do batalhão  
 > Mas o Jujuba era amigo de seus companheiros de rua
-> 
+>
 > Na hora da boia aparecia trazendo dois, três, quatro  
 > Em pouco a cachorrada magra, suja e miserável enchia o pátio do quartel  
 > Um dia o major dizia, os soldados se opuseram da saída do mascote  
 > Tomaram Jujuba nos braços e se engrenharam com os outros cachorros  
 > Ràaaaaaaa
-> 
+>
 > A cachorrada vadia voltou para a rua  
 > Mas quando Jujuba se viu solto  
 > Recusou-se a gozar do privilegio que queriam lhe dar  
 > Foi com os outros, foi com os outros
-> 
+>
 > Abelardo II: Demagogia
-> 
+>
 > Abelardo: Não, ele provou que não  
 > Nunca mais voltou para o quartel
-> 
+>
 > Os soldados ergueram um monumento ao Jujuba no pátio do quartel  
 > Compreenderam?  
 > O que não trai, que não trai, que não trai eram seus irmãos  
 > Os soldados são também da mesma classe de Jujuba, um dia também deixaram
-> 
+>
 > > Atropeladamente, os quartéis  
 > > Será a revolução social
 
@@ -257,9 +257,9 @@ Acreditei que isso que chamam de sociedade. Era como um cidadela. Que só podia 
 Eu também fiz isso, trai a minha fome.
 
 > A luta pelo dinheiro, a luta pela liberdade
-> 
+>
 > Só o dinheiro dá a liberdade!
-> 
+>
 > A liberdade de amar, de matar, de mentir!
 
 ![Pasted image 20230927221846.png](https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23zS2upbsFfZSXc2neRW5GVQyLeHs2kY79wk9JeGUQBFC4m8GTgUHn69F7SwUt2CA5AUq.png)
@@ -276,7 +276,7 @@ Eu também fiz isso, trai a minha fome.
 > No dia em que te vi  
 > No dia em que  
 > Me viste
-> 
+>
 > De repente vendi meus filhos pra uma família americana  
 > Eles têm carro  
 > Eles têm grana  

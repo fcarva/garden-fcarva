@@ -17,7 +17,6 @@ Esse espaço é um *jardim* de conhecimento na qual eu cultivo ideias de longo p
 - [Projetos](/projects)
 - [Agora](/agora)
 
-
 ## Em outros lugares
 
 Você pode acompanhar atualizações por:
@@ -26,5 +25,6 @@ Você pode acompanhar atualizações por:
 - [GitHub](https://github.com/fcarva)
 
 ## Mural
+
 ![[unnamed.jpg]]
 *Favela (1965) — Heitor dos Prazeres. óleo sobre tela.*

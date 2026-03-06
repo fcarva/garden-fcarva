@@ -11,7 +11,7 @@ tags:
 ---
 ![Uploaded image](https://storage.googleapis.com/papyrus_images/6a4448a140f1a9d612d8131484e90a633ac40e9ee7a5ceff5024415bc0ff9fc7.png)
 
-### A community to give, receive, and reciprocate to public goods projects in Brazil
+## A community to give, receive, and reciprocate to public goods projects in Brazil
 
 Dadiva aims to expand the connections between the tragedy of the commons problem in public goods funding in Brazil and new onchain capital allocation mechanisms.
 
@@ -19,7 +19,7 @@ Dadiva aims to expand the connections between the tragedy of the commons problem
 
 ## Intro
 
-### Dádiva emerges in this context as a bridge between: the socio-environmental impact communities and the onchain capital allocation and coordination mechanisms.
+### Dádiva emerges in this context as a bridge between: the socio-environmental impact communities and the onchain capital allocation and coordination mechanisms
 
 ---
 
