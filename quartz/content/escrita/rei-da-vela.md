@@ -1,15 +1,17 @@
 ---
-title: Rei da Vela
-source: https://peakd.com/hive-166847/@fcarva/enpt-the-king-of-candle
-description: Leitura crítica de O Rei da Vela e da montagem do Teatro Oficina no contexto social e político brasileiro.
-socialImage: https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23swnJUWNSsvKt4sQB7YkVhPoH2JgLdzQtBmo4ttLNPhM8EtBZCQHSrEYUAG2ajazZtbc.png
+title: O Rei da Vela
+socialImage: https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23tbJt4teWDyxfA19sJwCxLPT9kdLyV8gNELm9YFnUZWasNSgD6QLRord1KBnNL5utvyN.png
 date: 2026-03-05
+created: 2026-03-05
+description: Filmagem da montagem histórica da peça de Oswald de Andrade, ricos decadentes, filhos que rompem a tradição, o banqueiro no trópico colonial são os personagens interpretados pelo Grupo Oficina
 tags:
-  - escrita
-  - cultura
   - teatro
+  - roteiro
+  - cinema
 ---
 ## Rei Abelardo I agoniza; seu Secretário, Abelardo II, anseia subir ao poder; o povo enjaulado delira de fome
+
+![F6ouyZGWwAAdMr0.png](https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23tbJt4teWDyxfA19sJwCxLPT9kdLyV8gNELm9YFnUZWasNSgD6QLRord1KBnNL5utvyN.png)
 
 Filmagem da montagem histórica da peça de Oswald de Andrade, ricos decadentes, filhos que rompem a tradição, o banqueiro no trópico colonial são os personagens interpretados pelo Grupo Oficina, em uma célebre apresentação teatral realizada no ano de 1967, gravada fundamentalmente em 71 e lançada apenas em 82.
 
@@ -101,7 +103,7 @@ Em um diálogo entre Abelardos acontece uma descrição do secretário
 >
 > Abelardo II: Mas eu sempre defendi a tradição e a moral!
 
-![Pasted image 20230921231245.png](escrita/imagens/rei-da-vela-20230921231245.png)
+![Pasted image 20230921231245.png](https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23tbiXNRqPHbw8h8PvQTZnAqK6DqM5BNbs5breDdY44TEjyR4rEj7kX5rXf6J4Qesg9fH.png)
 
 ## Por que o Brasil não paga a dívida com o Café que está queimando?
 
@@ -313,5 +315,3 @@ Hoje morremos de miséria e de vergonha. Somos os recrutas da pobreza.
 Milhões de palitos transatlânticos para as nossas famílias educadas na ilusões da américa. Nós escolhemos a cadeia. Povo. Publico.
 
 ![Pasted image 20230927225543.png](https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23t7D8C6N17aBXNm8j14Fwir399H2Qmq5efGnQ1jcMvaujx5yy72oLEyEhJ4RFEiom1oj.png)
-
----

@@ -1,13 +1,15 @@
 ---
-title: Finanças regenerativas
-description: Introdução às finanças regenerativas e ao financiamento de bens públicos em contexto climático.
+title: "Um guia para finanças regenerativas"
 socialImage: https://storage.googleapis.com/papyrus_images/cafc9879687cc9dc4202170757a50c9799d359ae05c8b0f35e47cd6c7799c6d9.jpg
+author:
+  - "[[fcarva]]"
 date: 2026-03-05
+created: 2026-03-05
+description: "As pessoas têm medo da escuridão e eu tenho tentado dizer que da escuridão nada mais pode vir senão a luz. Jaider Esbell"
 tags:
-  - escrita
-  - economia
-  - bens-publicos
-  - clima
+  - finanças regenerativas
+  - alocação de capital
+  - bens públicos
 ---
 ![Uploaded image](https://storage.googleapis.com/papyrus_images/cafc9879687cc9dc4202170757a50c9799d359ae05c8b0f35e47cd6c7799c6d9.jpg)
 

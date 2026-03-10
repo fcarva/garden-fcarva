@@ -1,14 +1,14 @@
 ---
-title: Um guia para financiar limpezas de praias
-source: https://peakd.com/hive-141964/@fcarva/en-pt-a-guide-to
-description: Guia introdutório para financiar limpezas de praia com mecanismos onchain de impacto e coordenação comunitária.
-socialImage: https://images.ecency.com/DQmapdGKfg5QpzRSAfznGLVaVBDWsDWA6THJRN2DzYRMksq/97fc36b53598888c21d931161bc5d1ca.jpg
+title: "Um guia para financiar limpezas de praias"
 date: 2026-03-05
+created: 2026-03-05
+description: A limpeza de praia é uma atividade regenerativa na qual muitas das vezes sofre dificuldade de promoção, financiamento e escalabilidade. E se promovessemos a conservação ambiental por meio de um Onboarding de Impacto?
+socialImage: https://images.ecency.com/DQmapdGKfg5QpzRSAfznGLVaVBDWsDWA6THJRN2DzYRMksq/97fc36b53598888c21d931161bc5d1ca.jpg
 tags:
-  - escrita
-  - bens-publicos
-  - impacto
+  - bens públicos
+  - democracia participatória 
 ---
+
 ![](https://images.ecency.com/DQmapdGKfg5QpzRSAfznGLVaVBDWsDWA6THJRN2DzYRMksq/97fc36b53598888c21d931161bc5d1ca.jpg)
 
 ## Introdução

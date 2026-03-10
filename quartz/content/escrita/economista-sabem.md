@@ -1,12 +1,14 @@
 ---
 title: O que os economistas sabem?
-description: Ensaio sobre os limites epistemológicos da economia e o papel do método na prática dos economistas.
-socialImage: https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23y8sojCbC2haqwD1r67xo5ME7pbhXsCCSMqVwmQxm1xfQfpyMnXpb8qEfRJXdwV4gWNR.PNG
+author:
+  - fcarva
 date: 2026-03-05
+created: 2026-03-05
+description: o que os economistas sabem?
 tags:
-  - escrita
   - economia
-  - metodologia
+  - ensaio
+socialImage: https://images.hive.blog/0x0/https://files.peakd.com/file/peakd-hive/fcarva/23y8sojCbC2haqwD1r67xo5ME7pbhXsCCSMqVwmQxm1xfQfpyMnXpb8qEfRJXdwV4gWNR.PNG
 ---
 ## “Ciência Econômica: O Que É?”
 
@@ -108,5 +110,3 @@ Ao longo desse texto tentei reconstruir a trajetória do economista enquanto cie
 A ciência econômica mainstream, muita das vezes, protege os ‘’valores básicos’’ das grandes economias capitalistas sem se atentar para onde esses valores estão nos levando. Os economistas dizem: ‘’Faça da forma x que, no futuro, isso será y’’, sem ao menos considerar o quão frágil é seu argumento. Enquanto isto, no presente, trabalhamos para sustentar o que os economistas esperam: o progresso.
 
 Vale ressaltar que para os contemporâneos, o fim da história não aconteceu. O século XXI nos mostra que as previsões falham, a crise financeira de 2008, que as insurreições não se apaziguaram, o ciclo de manifestações de 2011 a 2014 ao redor do mundo, e que os caminhos para se trilhar uma nova sociedade ainda estão latentes.
-
----

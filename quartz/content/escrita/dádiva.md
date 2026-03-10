@@ -1,17 +1,18 @@
 ---
-title: Dádiva
-source: https://paragraph.com/editor/QjwIHhKuLjzPA6LUuDUx
-description: A proposta da Dádiva para conectar projetos socioambientais no Brasil com mecanismos onchain de financiamento de bens públicos.
-socialImage: og-image.jpg
+title: "Dádiva: onchain capital allocation in Brazil"
+socialImage: https://storage.googleapis.com/papyrus_images/6a4448a140f1a9d612d8131484e90a633ac40e9ee7a5ceff5024415bc0ff9fc7.png
 date: 2026-03-05
+created: 2026-03-05
+description: "A community to give, receive, and reciprocate to public goods projects in Brazil"
 tags:
-  - escrita
-  - bens-publicos
-  - financiamento
+  - dádiva
+  - bens públicos
+  - alocação de capital
+  - financiamento quadrático
 ---
 ![Uploaded image](https://storage.googleapis.com/papyrus_images/6a4448a140f1a9d612d8131484e90a633ac40e9ee7a5ceff5024415bc0ff9fc7.png)
 
-## A community to give, receive, and reciprocate to public goods projects in Brazil
+> A community to give, receive, and reciprocate to public goods projects in Brazil
 
 Dadiva aims to expand the connections between the tragedy of the commons problem in public goods funding in Brazil and new onchain capital allocation mechanisms.
 
@@ -27,8 +28,6 @@ In Brazil, social and environmental impact projects face funding challenges. Mos
 
 ![](https://storage.googleapis.com/papyrus_images/d8a42f161ef7aa9e505c6a57eab81ca60c50f8904e1b880a248ba14b7ef26323.png)
 
-image
-
 The lack of funding mechanisms results in an unequal distribution, favoring those projects with greater institutional connections or capacity in bureaucratic processes. Onchain capital allocation ecosystem has developed novel tools, such as quadratic funding and coordination protocols.
 
 However, these mechanisms remain inaccessible to most Brazilian entrepreneurs due to knowledge, technology, and infrastructure barriers.
@@ -41,8 +40,6 @@ A metaphor which goes: in the olden days, there is a commons which is owned by e
 
 ![](https://storage.googleapis.com/papyrus_images/41a5fda38fce4bbf487e8b600684cc832dc717a15dd3358b484f6793a7ad9a06.jpg)
 
-Design sem nome
-
 ## Funding and Allocating Capital Onchain
 
 What if we could educate the public about a new capital allocation mechanism? A system where the value of a contribution is not determined by its amount, but by the supporters and community.
@@ -52,8 +49,6 @@ We want Dádiva to be a bridge between: Brazil's socio-environmental impact comm
 ## What is Dádiva?
 
 ![](https://storage.googleapis.com/papyrus_images/6fae8f88b8f96126f70f797cbf49611dcedf48d0d63cc7e30891f769ef756237.png)
-
-image
 
 ### Give
 
@@ -70,8 +65,6 @@ image
 ## Roadmap
 
 ![](https://storage.googleapis.com/papyrus_images/277d510df680c1c7cd90a4f4c27493a9637b0655fa5de0c78e67431dada648f2.png)
-
-image
 
 ## Goal
 
@@ -116,7 +109,3 @@ image
 - Pasquini, Ricardo, " [Quadratic Funding and Matching Funds Requirements](https://ssrn.com/abstract=3702318) ".
 - Owocki, Kevin. [Onchain Capital Allocation Handbook. Gitcoin](https://allobook.gitcoin.co/).
 - ENAP, 2021. Institutional initiatives to [discuss quadratic funding in Brazil](https://web.archive.org/web/20240908183305/https://www.enap.gov.br/pt/acontece/noticias/entenda-o-financiamento-quadratico-alternativa-em-tempos-de-recursos-escassos-para-investimentos#expand).
-
-**Help this Docs:**
-
-[https://discord.gg/4S8da4vgKZ](https://discord.gg/4S8da4vgKZ)
